@@ -1,2 +1,12 @@
 # 2024-group-14
-- Tanmay Mishra, fu23194@bristol.ac.uk, TanmayMishra4
+
+## Game Video
+
+## Team
+Jiarong Zhang, Boyang Lin, Tanmay Mishra, Chun Ka Elvis Yung
+
+## Introduction 
+
+## Requirements
+
+
