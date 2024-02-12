@@ -6,7 +6,7 @@ Click on the video above to view our game!
 
 ## Team
 
-####Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Chun Ka Elvis Yung 
+### Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Chun Ka Elvis Yung 
 ![Group-14-Picture](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/resources/images/group-14.JPG)
 
 ## Introduction 
