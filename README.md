@@ -14,9 +14,9 @@ Click on the video above to view our game!
 ### Rapid Roll (Final Idea)
 ![Rapid-roll-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/rapid-roll.jpg)
 
-This is a one-player platform game where players control a ball that continuously rolls down a series of platforms without dying. There will be 3 levels, easy, medium and hard and they reflect the speed of the ball as it falls, making the game more challenging, as well as moving platforms and innovative obstacles. Furthermore, based on how many coins the player collects while playing, it will translate to getting more lives, therefore allowing the player to increase their score. Likewise, the platforms will have spikes and be generative, adding further complexity and challenge to the game. 
+This is a one-player platform game where players control a ball that continuously rolls down a series of platforms without dying. There will be 3 levels (easy, medium, and hard) and they reflect the speed of the ball as it falls, making the game more challenging, as well as moving platforms and innovative obstacles. Furthermore, based on how many coins the player collects while playing, it will translate to getting more lives, therefore allowing the player to increase their score. Likewise, the platforms will have spikes and be generative, adding further complexity and challenge to the game. 
 
-**Twist**: After an X amount of time, instead of the player falling to avoid spikes, the player will need to jump to avoid them. The map will start ascending and the player will be jumping to avoid the spikes. Moreover, the map will revert to falling, but the player will not know when - adding an element of suspense. 
+**Twist**: After an X amount of time, instead of the player falling to avoid spikes, the player will need to jump to avoid them. The map will start ascending and the player will jump to avoid the spikes. Moreover, the map will revert to falling, but the player will not know when - adding an element of suspense. 
 
 Challenges:
 - Generative Platforming 
@@ -32,15 +32,13 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 ### User stories
 
-> "⁠As a thrill-seeking player, I want the game to offer various levels of difficulty so that I can continuously challenge myself and enjoy the satisfaction of overcoming obstacles."
+> "⁠As a player, I want to be able to choose a difficulty level for the game to better suit my style of play"
 
-> "⁠As a social player, I want the game to have a leaderboard so I can compare my scores with my peers, adding to the competitive and interactive fun."
+> "⁠As a player, I want to be able to see a scoreboard to compare myself with my peers"
 
-> ⁠⁠"As a game designer, I want to introduce multiple game modes to provide new challenges and cater to different players, aiming to improve player engagement and retention."
+> "As a player, I want to see my score and lives left on the screen as I play the game"
 
-> "As a player, I want a clear representation of my lost and gained lives during the game to enhance my sense of urgency and engagement."
-
-> "⁠⁠As a player, I want to be able to understand the rules of the game before playing so that I can prepare myself for the challenges ahead."
+> "⁠⁠As a player, I want to see the rules of the game before playing it, so that I can prepare myself for the challenges ahead"
 
 ### Use-Case Diagram
 
