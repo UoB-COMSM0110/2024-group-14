@@ -27,6 +27,8 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 > "As a player, I want to see my score and lives left on the screen as I play the game"
 
+> "As a player, I want to be warned of the map inversion so that I can prepare myself"
+
 > "⁠⁠As a player, I want to see the rules of the game before playing it, so that I can prepare myself for the challenges ahead"
 
 ### Use-Case Diagram
