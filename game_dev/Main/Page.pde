@@ -3,6 +3,7 @@ public class Page {
   // Main Page
   public void mainPage(){
     // Load Main Menu
+    surface.setTitle("Deep Sea Fall!! Main Menu");
     image(mainMenu, 0, 0, width, height);
     
     // Loading Game Title
@@ -38,6 +39,7 @@ public class Page {
     fill(255);
     rect(0, 0, width, statusBarHeight);
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    image(scoreLabel, backButtonX + backButtonWidth + 10, backButtonY, backButtonWidth, backButtonHeight);
   }
   
   public void startPage(){
