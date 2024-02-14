@@ -1,4 +1,4 @@
-PImage mainMenu, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton;
+PImage mainMenu, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton;
 
 int pageNumber;
 
@@ -22,6 +22,7 @@ void setup() {
   pageNumber = 1;
   
   mainMenu = loadImage("../assets/deep-sea2.jpg");
+  scoreLabel = loadImage("../assets/score-button.png");
   backButton = loadImage("../assets/back-button.png");
   startButton = loadImage("../assets/start-button.png");
   helpButton = loadImage("../assets/help-button.png");
