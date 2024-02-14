@@ -1,8 +1,12 @@
+import ddf.minim.*;
 PImage mainMenu, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton;
 
 int pageNumber;
+Minim minim;
+static AudioPlayer titlePlayer, gamePlayer;
 
 int buttonWidth = 180; 
+int musicDelay = 150;
 int buttonHeight = 70;
 int backButtonWidth = 100;
 int backButtonHeight = 30;
@@ -21,6 +25,11 @@ void setup() {
   page = new Page();
   pageNumber = 1;
   
+  minim = new Minim(this);
+  titlePlayer = minim.loadFile("../assets/music/titlescreen-music.mp3");
+  titlePlayer.loop();
+  gamePlayer = minim.loadFile("../assets/music/gameplay-music.mp3");
+  
   mainMenu = loadImage("../assets/deep-sea2.jpg");
   scoreLabel = loadImage("../assets/score-button.png");
   backButton = loadImage("../assets/back-button.png");
@@ -33,6 +42,21 @@ void setup() {
   sharkImage = loadImage("../assets/shark-image.png");
   crabPlayer = loadImage("../assets/crab.png");
   
+}
+
+void changeMusic(AudioPlayer currentMusic, AudioPlayer newMusic) {
+  if(!currentMusic.isPlaying() || newMusic.isPlaying()){
+     return;
+  }
+  currentMusic.pause();
+  delay(musicDelay);
+  newMusic.loop();
+}
+
+void musicStop(AudioPlayer player){
+  player.close();
+  minim.stop();
+  super.stop();
 }
 
 
@@ -66,7 +90,8 @@ void mousePressed() {
      if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > height/2 - buttonHeight && mouseY < height/2) {
       // Start button clicked, you can add your code here to start the game
-      println("Start button clicked");
+       changeMusic(titlePlayer, gamePlayer);
+       println("Start button clicked");
        pageNumber = 2;
      }
      // Check if Mouse is inside the About Button on Main Menu
@@ -75,6 +100,7 @@ void mousePressed() {
       // Start button clicked, you can add your code here to start the game
        println("About button clicked");
        pageNumber = 3;
+       changeMusic(gamePlayer, titlePlayer);
      }
      // Check if Mouse is inside the Help Button on Main Menu
      if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
@@ -82,6 +108,7 @@ void mousePressed() {
       // Start button clicked, you can add your code here to start the game
        println("Help button Clicked");
        pageNumber = 4;
+       changeMusic(gamePlayer, titlePlayer);
      }
      // Check if Mouse is inside the Leaderboard Button on Main Menu
      if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
@@ -89,6 +116,7 @@ void mousePressed() {
       // Start button clicked, you can add your code here to start the game
        println("LeaderBoard button Clicked");
        pageNumber = 5;
+       changeMusic(gamePlayer, titlePlayer);
      }
   }
   else{
@@ -97,7 +125,7 @@ void mousePressed() {
       mouseY > backButtonY && mouseY < backButtonY + backButtonHeight) {
         println("Back Button clicked");
         pageNumber = 1;
+       changeMusic(gamePlayer, titlePlayer);
       }
   }
- 
 }
