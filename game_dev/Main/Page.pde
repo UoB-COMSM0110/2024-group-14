@@ -33,4 +33,34 @@ public class Page {
     image(scoreBoardButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 300, buttonWidth, buttonHeight);
         
   }
+  
+  public void drawStatusBar(){
+    fill(255);
+    rect(0, 0, width, statusBarHeight);
+    image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+  }
+  
+  public void startPage(){
+    image(mainMenu, 0, 0, width, height);
+    surface.setTitle("Start");
+    drawStatusBar();
+  }
+  
+  public void aboutPage(){
+    image(mainMenu, 0, 0, width, height);
+    surface.setTitle("About Page");
+    image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+  }
+  
+  public void helpPage(){
+    image(mainMenu, 0, 0, width, height);
+    surface.setTitle("Help Page");
+    image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+  }
+  
+  public void leaderboardPage(){
+    image(mainMenu, 0, 0, width, height);
+    surface.setTitle("Leaderboard");
+    image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+  }
 }
