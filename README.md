@@ -19,6 +19,15 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 ![Paper-prototype-final-game](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/final-game.gif)
 
+## Technical Requirements
+- A home screen where the player is able to select the difficulty modes and see the controls for the game.
+- Difficulty Levels (mainly easy, medium and hard)
+- Generation of platforms at random places in the map
+- Keeping record of high scores of all the players
+- Placing obstacles and coins randomly on platforms according to difficulty
+- Adjusting the speed of play according to the level of difficulty
+
+
 ### User stories
 
 > "⁠As a player, I want to be able to choose a difficulty level for the game to better suit my style of play"
