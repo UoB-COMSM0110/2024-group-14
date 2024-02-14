@@ -42,8 +42,9 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 > "⁠⁠As a player, I want to be able to understand the rules of the game before playing so that I can prepare myself for the challenges ahead."
 
-
 ### Use-Case Diagram
+
+![Use-case-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/use-case-diagram.png)
 
 ### Use-Case Specifications
 
