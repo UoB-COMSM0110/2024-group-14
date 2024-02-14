@@ -23,7 +23,7 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 > "⁠As a player, I want to be able to choose a difficulty level for the game to better suit my style of play"
 
-> "⁠As a player, I want to be able to see a scoreboard to compare myself with my peers"
+> "⁠As a player, I want to be able to see a scoreboard and compare myself with my peers"
 
 > "As a player, I want to see my score and lives left on the screen as I play the game"
 
