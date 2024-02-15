@@ -52,6 +52,8 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("About Page");
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    
+    
   }
   
   public void helpPage(){
