@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage mainMenu, livesLabel, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo;
+PImage mainMenu, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel;
 
 int pageNumber;
 Minim minim;
@@ -48,7 +48,10 @@ void setup() {
   loreLogo = loadImage("../assets/lore-logo.png");
   shipImage= loadImage("../assets/wreck-ship-image.png");
   speechBubble = loadImage("../assets/speech-bubble.png");
-  
+  howToPlayLabel = loadImage("../assets/howToPlay.png");
+  leftArrowLabel = loadImage("../assets/left-arrow.png");
+  rightArrowLabel = loadImage("../assets/right-arrow.png");
+  spaceKeyLabel = loadImage("../assets/space-key.png");
 }
 
 void changeMusic(AudioPlayer currentMusic, AudioPlayer newMusic) {
