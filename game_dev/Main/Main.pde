@@ -1,8 +1,9 @@
 import ddf.minim.*;
-PImage mainMenu, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, speechBubble, easyButton, levelLogo, mediumButton, hardButton;
+PImage mainMenu, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
+GameModel gameModel;
 static AudioPlayer titlePlayer, gamePlayer;
 
 int buttonWidth = 180; 
@@ -10,6 +11,7 @@ int musicDelay = 150;
 int buttonHeight = 70;
 int backButtonWidth = 100;
 int backButtonHeight = 30;
+int livesWidth = 30;
 int backButtonX = 3;
 int backButtonY = 3;
 int statusBarHeight = 36;
@@ -22,7 +24,8 @@ void setup() {
   size(600, 700);
   buttonColor = color(255, 255, 255);
   textColor = color(255);
-  page = new Page();
+  gameModel = new GameModel();
+  page = new Page(gameModel);
   pageNumber = 1;
   
   minim = new Minim(this);
@@ -31,6 +34,7 @@ void setup() {
   gamePlayer = minim.loadFile("../assets/music/gameplay-music.mp3");
   
   mainMenu = loadImage("../assets/deep-sea2.jpg");
+  livesLabel = loadImage("../assets/heart-image.png");
   scoreLabel = loadImage("../assets/score-button.png");
   backButton = loadImage("../assets/back-button.png");
   startButton = loadImage("../assets/start-button.png");
@@ -48,6 +52,10 @@ void setup() {
   mediumButton = loadImage("../assets/normal-button.png");
   hardButton = loadImage("../assets/hard-button.png");
   
+  howToPlayLabel = loadImage("../assets/howToPlay.png");
+  leftArrowLabel = loadImage("../assets/left-arrow.png");
+  rightArrowLabel = loadImage("../assets/right-arrow.png");
+  spaceKeyLabel = loadImage("../assets/space-key.png");
 }
 
 void changeMusic(AudioPlayer currentMusic, AudioPlayer newMusic) {
