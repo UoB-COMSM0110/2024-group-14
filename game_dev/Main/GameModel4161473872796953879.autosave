@@ -1,0 +1,47 @@
+public class GameModel{
+  private int score;
+  private String level;
+  private int lives;
+  
+  GameModel(){
+    score = 0;
+    level = "EASY";
+    lives = 3;
+  }
+  
+  GameModel(int score, int lives, String level){
+    this.score = score;
+    this.level = level;
+    this.lives = lives;
+  }
+  
+  public int getScore(){
+    return this.score;
+  }
+  
+  public int getLives(){
+    return this.lives;
+  }
+  
+  public String getLevel(){
+    return this.level;
+  }
+  
+  public void setScore(int score){
+    if(score >= 0){
+      this.score = score;    
+    }
+  }
+  
+  public void setLives(int lives){
+    if(lives >= 0 && lives <= 5){
+      this.lives = lives;
+    }
+  }
+  
+  public void setLevel(String level){
+    if(level.equals("EASY") || level.equals("MEDIUM") || level.equals("HARD")){
+      this.level = level;
+    }
+  }
+}

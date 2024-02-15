@@ -1,4 +1,9 @@
 public class Page {
+  GameModel gameModel;
+  
+  Page(GameModel gameModel){
+    this.gameModel = gameModel;
+  }
 
   // Main Page
   public void mainPage(){
@@ -35,11 +40,15 @@ public class Page {
         
   }
   
-  public void drawStatusBar(){
+  private void drawStatusBar(){
     fill(255);
     rect(0, 0, width, statusBarHeight);
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
     image(scoreLabel, backButtonX + backButtonWidth + 10, backButtonY, backButtonWidth, backButtonHeight);
+    int lives = gameModel.getLives();
+    for(int i=lives;i>0;i--){
+      image(livesLabel, width - i*livesWidth, backButtonY, livesWidth, backButtonHeight);
+    }
   }
   
   public void startPage(){
@@ -91,6 +100,18 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("Help Page");
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    image(howToPlayLabel, (width/2 - width/4) + 3, 10, width/2, buttonHeight);
+    PFont font = createFont("../assets/pixel-font-text.ttf", 16);
+    textFont(font);
+    text("Control the crab using the arrow keys", 50, 120);
+    text("and space bar", 50, 140);
+    image(leftArrowLabel, width/2 - buttonWidth/2, height/2 - buttonHeight*2, buttonWidth, buttonHeight);
+    text("Move Left", width/2 - buttonWidth/4 , height/2 - buttonHeight + 30);
+    image(rightArrowLabel, width/2 - buttonWidth/2, height/2, buttonWidth, buttonHeight);
+    text("Move Right", width/2 - buttonWidth/4 , height/2 + buttonHeight + 30);
+    image(spaceKeyLabel, width/2 - buttonWidth/2, height/2 + buttonHeight*2, buttonWidth, buttonHeight);
+    text("Crab Jump", width/2 - buttonWidth/4, height/2 + buttonHeight*3 + 30);
+    
   }
   
   public void leaderboardPage(){
