@@ -57,12 +57,13 @@ User plays the game with less than three lives lost.
 4. User chooses EASY.
 5. The system generates the game interface.
 6. The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
-8. User aims to achieve the highest possible score before running out of lives.
+7. User aims to achieve the highest possible score before running out of lives.
 
 **Alternative flow:**
-8. If the user hits spike or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
-9. The users lose all their three lives during the game.
-10. The game ends, and a 'PLAY AGAIN' screen pops up.
+
+7. If the user hits spike or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
+8. The users lose all their three lives during the game.
+9. The game ends, and a 'PLAY AGAIN' screen pops up.
 
 **Medium mode:**
 The system adds obstacles and platforms that move left and right to the game interface based on easy mode.
