@@ -46,6 +46,8 @@ void setup() {
   sharkImage = loadImage("../assets/shark-image.png");
   crabPlayer = loadImage("../assets/crab.png");
   loreLogo = loadImage("../assets/lore-logo.png");
+  shipImage= loadImage("../assets/wreck-ship-image.png");
+  speechBubble = loadImage("../assets/speech-bubble.png");
   
 }
 

@@ -45,51 +45,65 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 ![Use-case-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/use-case-diagram.png)
 
 ### Use-Case Specifications
-Easy mode: The platform will only move from bottom to top and there are no obstacles.
-Basic flow: User plays the game with less than three lives lost.
-1.The system displays the main page, including the PLAY GAME,HELP and SCORE BOARD.
-2.User presses START to start playing.
-3.System displays the difficulty level: EASY, MEDIUM or HARD.
-4.User chooses EASY.
-5.The system generates the game interface.
-6.The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
-8.User aims to achieve the highest possible score before running out of lives.
 
-alternative flow:
-8. If the user hits spike or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
-9.The users loses all their three lives during the game.
-10.The game ends and a 'PLAY AGAIN' screen pops up.
+**Easy mode:**
+The platform will only move from bottom to top and there are no obstacles.
 
-Medium mode: The system adds obstacles and platforms that move left and right to the game interface based on easy mode.
-Basic flow: User plays the game with less than three lives lost.
-1.The system displays the main page, including the START,HELP, ABOUT and SCORE BOARD.
-2.User presses START to start playing.
-3.System displays the difficulty level: EASY, MEDIUM or HARD.
-4.User chooses MEDIUM.
-5.The system generates the game interface.
-6.The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
-8.User aims to achieve the highest possible score before running out of lives.
+**Basic flow:**
+User plays the game with less than three lives lost.
+1. The system displays the main page, including the PLAY GAME, HELP, and SCORE BOARD.
+2. User presses START to start playing.
+3. System displays the difficulty level: EASY, MEDIUM, or HARD.
+4. User chooses EASY.
+5. The system generates the game interface.
+6. The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
+7. User aims to achieve the highest possible score before running out of lives.
 
-alternative flow:
+**Alternative flow:**
+
+7. If the user hits spike or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
+8. The users lose all their three lives during the game.
+9. The game ends, and a 'PLAY AGAIN' screen pops up.
+
+**Medium mode:**
+The system adds obstacles and platforms that move left and right to the game interface based on easy mode.
+
+**Basic flow:**
+User plays the game with less than three lives lost.
+1. The system displays the main page, including the START, HELP, ABOUT, and SCORE BOARD.
+2. User presses START to start playing.
+3. System displays the difficulty level: EASY, MEDIUM, or HARD.
+4. User chooses MEDIUM.
+5. The system generates the game interface.
+6. The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
+8. User aims to achieve the highest possible score before running out of lives.
+
+**Alternative flow:**
+
 8. If the user hits spike or obstacles, or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
-9.The users loses all their three lives during the game.
-10.The game ends and a 'PLAY AGAIN' screen pops up.
+9. The users lose all their three lives during the game.
+10. The game ends, and a 'PLAY AGAIN' screen pops up.
 
-Hard mode: The system adds ascending map, map switch timer and jumping functions based on the medium mode.
-Basic flow: User plays the game with less than three lives lost.
-1.The system displays the main page, including the START,HELP, ABOUT and SCORE BOARD.
-2.User presses START to start playing.
-3.System displays the difficulty level: EASY, MEDIUM or HARD.
-4.User chooses HARD.
-5.The system generates the game interface.
-6.The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
-7.When the map switching timer shows 0, the system will automatically change a new map for the user: the platform changes to move from top to bottom.
-8.The user controls the left, right and up arrow keys to move the crab.
-9.User aims to achieve the highest possible score before running out of lives.
+**Hard mode:**
+The system adds an ascending map, map switch timer, and jumping functions based on the medium mode.
 
-alternative flow:
-9.If the user hits spike or obstacles, or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
-10.The users loses all their three lives during the game.
-11.The game ends and a 'PLAY AGAIN' screen pops up.
+**Basic flow:**
+User plays the game with less than three lives lost.
+1. The system displays the main page, including the START, HELP, ABOUT, and SCORE BOARD.
+2. User presses START to start playing.
+3. System displays the difficulty level: EASY, MEDIUM, or HARD.
+4. User chooses HARD.
+5. The system generates the game interface.
+6. The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
+7. When the map switching timer shows 0, the system will automatically change a new map for the user: the platform changes to move from top to bottom.
+8. The user controls the left, right, and up arrow keys to move the crab.
+9. User aims to achieve the highest possible score before running out of lives.
+
+**Alternative flow:**
+
+9. If the user hits spike or obstacles, or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
+10. The users lose all their three lives during the game.
+11. The game ends, and a 'PLAY AGAIN' screen pops up.
+
 
 
