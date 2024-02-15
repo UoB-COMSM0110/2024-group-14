@@ -46,6 +46,16 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("Start");
     drawStatusBar();
+    
+    levelLogo.resize(300, 0);
+    image(levelLogo, 160, 50);
+    
+    image(easyButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) - 75, buttonWidth, buttonHeight);
+
+    image(mediumButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 75, buttonWidth, buttonHeight);
+    
+    image(hardButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 225, buttonWidth, buttonHeight);
+    
   }
   
   public void aboutPage(){
