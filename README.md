@@ -47,7 +47,7 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 ### Use-Case Specifications
 Easy mode: The platform will only move from bottom to top and there are no obstacles.
 Basic flow: User plays the game with less than three lives lost.
-1.The system displays the main page, including the PLAY GAME,HELP and SCORE BOARD. 
+1.The system displays the main page, including the PLAY GAME,HELP and SCORE BOARD.
 2.User presses START to start playing.
 3.System displays the difficulty level: EASY, MEDIUM or HARD.
 4.User chooses EASY.
