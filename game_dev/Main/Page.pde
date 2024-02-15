@@ -1,4 +1,10 @@
 public class Page {
+  
+  GameModel gameModel;
+  
+  Page(GameModel gameModel){
+    this.gameModel = gameModel;
+  }
 
   // Main Page
   public void mainPage(){
@@ -40,6 +46,10 @@ public class Page {
     rect(0, 0, width, statusBarHeight);
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
     image(scoreLabel, backButtonX + backButtonWidth + 10, backButtonY, backButtonWidth, backButtonHeight);
+    int lives = gameModel.getLives();
+    for(int i=lives;i>0;i--){
+      image(livesLabel, width - i*livesWidth, backButtonY, livesWidth, backButtonHeight);
+    }
   }
   
   public void startPage(){
