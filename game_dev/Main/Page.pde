@@ -53,7 +53,13 @@ public class Page {
     surface.setTitle("About Page");
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
     
+    // Load Lore Logo
+    loreLogo.resize(250, 0);
+    image(loreLogo, 175, 0);
     
+    PFont font = createFont("../assets/pixel-font-text.ttf", 16);
+    textFont(font);
+    text("The world is dead.", 10, 100);
   }
   
   public void helpPage(){
