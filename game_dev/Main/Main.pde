@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage mainMenu, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo;
+PImage mainMenu, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, shipImage, speechBubble;
 
 int pageNumber;
 Minim minim;
@@ -42,6 +42,8 @@ void setup() {
   sharkImage = loadImage("../assets/shark-image.png");
   crabPlayer = loadImage("../assets/crab.png");
   loreLogo = loadImage("../assets/lore-logo.png");
+  shipImage= loadImage("../assets/wreck-ship-image.png");
+  speechBubble = loadImage("../assets/speech-bubble.png");
   
 }
 
