@@ -79,6 +79,7 @@ User plays the game with less than three lives lost.
 8. User aims to achieve the highest possible score before running out of lives.
 
 **Alternative flow:**
+
 8. If the user hits spike or obstacles, or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
 9. The users lose all their three lives during the game.
 10. The game ends, and a 'PLAY AGAIN' screen pops up.
@@ -99,6 +100,7 @@ User plays the game with less than three lives lost.
 9. User aims to achieve the highest possible score before running out of lives.
 
 **Alternative flow:**
+
 9. If the user hits spike or obstacles, or falls off, user loses one live and the system automatically returns the crab to a certain position to continue the game.
 10. The users lose all their three lives during the game.
 11. The game ends, and a 'PLAY AGAIN' screen pops up.
