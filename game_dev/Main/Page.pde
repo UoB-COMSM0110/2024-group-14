@@ -55,6 +55,16 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("Start");
     drawStatusBar();
+    
+    levelLogo.resize(300, 0);
+    image(levelLogo, 160, 50);
+    
+    image(easyButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) - 75, buttonWidth, buttonHeight);
+
+    image(mediumButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 75, buttonWidth, buttonHeight);
+    
+    image(hardButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 225, buttonWidth, buttonHeight);
+    
   }
   
   public void aboutPage(){
@@ -85,14 +95,16 @@ public class Page {
     text("the difficulty of reaching 100 coins could vary. ", 10, 540);
     text("Now, let's get started and try to save our diver ", 10, 570);
     text("from this horrible misfortune.", 10, 600);
+    fill(0, 0, 0);
     
-    shipImage.resize(150, 0);
-    image(shipImage, 250, 599);
+    // Loading Crab/Player Image
+    crabPlayer.resize(70, 0);
+    image(crabPlayer, 380, 650);
     
-    speechBubble.resize(150, 0);
-    image(speechBubble, 400, 580);
-    fill(0, 408, 612);
-    text("Best of Luck!", 400, 600);
+    speechBubble.resize(190, 0);
+    image(speechBubble, 400, 570);
+    text("Best of Luck!", 420, 615);
+    fill(255, 408, 612);
     
   }
   

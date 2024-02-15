@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage mainMenu, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel;
+PImage mainMenu, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
@@ -46,8 +46,12 @@ void setup() {
   sharkImage = loadImage("../assets/shark-image.png");
   crabPlayer = loadImage("../assets/crab.png");
   loreLogo = loadImage("../assets/lore-logo.png");
-  shipImage= loadImage("../assets/wreck-ship-image.png");
   speechBubble = loadImage("../assets/speech-bubble.png");
+  easyButton = loadImage("../assets/easy-button.png");
+  levelLogo = loadImage("../assets/level-image.png");
+  mediumButton = loadImage("../assets/normal-button.png");
+  hardButton = loadImage("../assets/hard-button.png");
+  
   howToPlayLabel = loadImage("../assets/howToPlay.png");
   leftArrowLabel = loadImage("../assets/left-arrow.png");
   rightArrowLabel = loadImage("../assets/right-arrow.png");
@@ -129,7 +133,26 @@ void mousePressed() {
        changeMusic(gamePlayer, titlePlayer);
      }
   }
-  else{
+  if (pageNumber == 2){
+    // Check if the Mouse is inside the Easy Button 
+      if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
+      mouseY > (height/2 - buttonHeight) - 75 && mouseY < (height/2) - 75) {
+      println("Easy button clicked");
+      //pageNumber = 6;
+      }
+    // Check if the Mouse is inside the Medium Button
+    if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
+      mouseY > (height/2 - buttonHeight) + 75 && mouseY < (height/2) + 75) {
+      println("Medium button clicked");
+      //pageNumber = 7;
+      }
+    // Check if the Mouse is inside the Hard Button
+    if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
+      mouseY > (height/2 - buttonHeight) + 225 && mouseY < (height/2) + 225) {
+      println("Hard button clicked");
+      //pageNumber = 8;
+      }
+  }
     // Check if Mouse is inside the Back Button on Any Other Page
     if (mouseX > backButtonX && mouseX < backButtonX + backButtonWidth &&
       mouseY > backButtonY && mouseY < backButtonY + backButtonHeight) {
@@ -137,5 +160,4 @@ void mousePressed() {
         pageNumber = 1;
        changeMusic(gamePlayer, titlePlayer);
       }
-  }
 }
