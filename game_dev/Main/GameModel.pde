@@ -3,7 +3,7 @@ public class GameModel{
   private String level;
   private int lives;
   private boolean gravity;
-  
+  boolean isGameOver;
   GameModel(){
     this(0, 3, "EASY");
   }
@@ -12,6 +12,7 @@ public class GameModel{
     this.score = score;
     this.level = level;
     this.lives = lives;
+    this.isGameOver = false;
   }
   
   public int getLives(){
@@ -26,8 +27,20 @@ public class GameModel{
     return this.level;
   }
   
+  public boolean getIsGameOver(){
+    return this.isGameOver;
+  }
+  
+  public void setIsGameOver(boolean val){
+    this.isGameOver = val;
+  }
+  
   public void setLives(int lives){
     if(lives >= 0 && lives <= 5) this.lives = lives;
+  }
+  
+  public void gainLife(){
+    setLives(getLives()+1);
   }
   
   public boolean getGravity(){

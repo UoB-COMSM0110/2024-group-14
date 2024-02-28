@@ -4,6 +4,9 @@ PImage mainMenu, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel
 int pageNumber;
 Minim minim;
 GameModel gameModel;
+GameService gameService;
+Ball ball;
+Player player;
 static AudioPlayer titlePlayer, gamePlayer;
 
 int buttonWidth = 180; 
@@ -25,7 +28,10 @@ void setup() {
   buttonColor = color(255, 255, 255);
   textColor = color(255);
   gameModel = new GameModel();
-  page = new Page(gameModel);
+  player = new Player(); 
+  ball = new Ball(10.0, 10.0); // TODO set some meaningful initial X, Y 
+  gameService = new GameService(gameModel, ball, player);
+  page = new Page(gameModel, gameService);
   pageNumber = 1;
   
   minim = new Minim(this);
@@ -91,6 +97,11 @@ void draw() {
      case 5:
        page.leaderboardPage();
        break;
+     case 6:
+     case 7:
+     case 8:
+       page.gamePlayPage();
+       break;
      default:
        page.mainPage();
        break;
@@ -138,19 +149,19 @@ void mousePressed() {
       if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) - 75 && mouseY < (height/2) - 75) {
       println("Easy button clicked");
-      //pageNumber = 6;
+      pageNumber = 6;
       }
     // Check if the Mouse is inside the Medium Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 75 && mouseY < (height/2) + 75) {
       println("Medium button clicked");
-      //pageNumber = 7;
+      pageNumber = 7;
       }
     // Check if the Mouse is inside the Hard Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 225 && mouseY < (height/2) + 225) {
       println("Hard button clicked");
-      //pageNumber = 8;
+      pageNumber = 8;
       }
   }
     // Check if Mouse is inside the Back Button on Any Other Page
