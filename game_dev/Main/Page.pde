@@ -1,8 +1,10 @@
 public class Page {
   GameModel gameModel;
+  GameService gameService;
   
-  Page(GameModel gameModel){
+  Page(GameModel gameModel, GameService gameService){
     this.gameModel = gameModel;
+    this.gameService = gameService;
   }
 
   // Main Page
@@ -45,10 +47,8 @@ public class Page {
     rect(0, 0, width, statusBarHeight);
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
     image(scoreLabel, backButtonX + backButtonWidth + 10, backButtonY, backButtonWidth, backButtonHeight);
-    int lives = gameModel.getLives();
-    for(int i=lives;i>0;i--){
-      image(livesLabel, width - i*livesWidth, backButtonY, livesWidth, backButtonHeight);
-    }
+    gameService.drawLivesOnScreen();
+    gameService.displayScore();
   }
   
   public void startPage(){
@@ -65,6 +65,43 @@ public class Page {
     
     image(hardButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 225, buttonWidth, buttonHeight);
     
+  }
+  
+  public void gamePlayPage(){
+    image(mainMenu, 0, 0, width, height);
+    surface.setTitle("Start");
+    drawStatusBar();
+    
+    if (!gameService.isGameOver()) {
+      ball.update();
+      gameService.updatePlatforms();
+      gameService.updateCoins();
+      gameService.checkCollision();
+      handleInput();
+      gameService.checkGameOver();
+      gameService.updateScore();
+      gameService.displayCollectedCoins();
+      gameService.displayScore();
+      gameService.drawLivesOnScreen();
+    } 
+    else {
+      gameService.displayGameOver();
+      if (keyPressed && (key == 'r' || key == 'R')) {
+        gameService.initializeGame();
+      }
+    }  
+  }
+  
+  public void handleInput(){
+    if (keyPressed) {
+      if (keyCode == LEFT) {
+        ball.speedX = -ball.maxSpeed;
+      } else if (keyCode == RIGHT) {
+        ball.speedX = ball.maxSpeed;
+      }
+    } else {
+      ball.speedX = 0;
+    }
   }
   
   public void aboutPage(){
