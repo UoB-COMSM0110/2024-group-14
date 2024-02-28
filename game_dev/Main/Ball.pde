@@ -1,7 +1,6 @@
 class Ball {
   float x, y;
   float speedY = 0;
-  float gravity = 0.05;
   float speedX = 0;
   float maxSpeed = 5;
 
@@ -9,40 +8,40 @@ class Ball {
     x = initialX;
     y = initialY;
   }
-  
-  public void setSpeedX(int speedX){
+
+  public void setSpeedX(int speedX) {
     this.speedX = speedX;
   }
-  
-  public float getSpeedX(){
+
+  public float getSpeedX() {
     return this.speedX;
   }
-  
-  public float getSpeedY(){
+
+  public float getSpeedY() {
     return this.speedY;
-  } 
-  
-  public void setSpeedY(int speedY){
+  }
+
+  public void setSpeedY(int speedY) {
     this.speedY = speedY;
   }
-  
-  public float getX(){
+
+  public float getX() {
     return this.x;
   }
-  
-  public float getY(){
+
+  public float getY() {
     return this.y;
-  } 
-  
-  public void setX(float x){
+  }
+
+  public void setX(float x) {
     this.x = x;
   }
-  
-  public void setY(float y){
+
+  public void setY(float y) {
     this.y = y;
   }
 
-  void update() {
+  void update(float gravity) {
     speedY += gravity;
     y += speedY;
     x += speedX;
@@ -52,6 +51,4 @@ class Ball {
     fill(255, 0, 0);
     ellipse(x, y, 20, 20);
   }
-
-  
 }

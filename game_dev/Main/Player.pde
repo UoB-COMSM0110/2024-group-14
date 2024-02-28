@@ -1,57 +1,56 @@
-public class Player{
+public class Player {
   private int coinsCollected, maxSpeed, playerXSpeed, playerYSpeed;
   private float xPosition, yPosition;
-  
+
   public float getxPosition() {
-      return xPosition;
+    return xPosition;
   }
 
   public void setxPosition(float xPosition) {
-      this.xPosition = xPosition;
+    this.xPosition = xPosition;
   }
 
   public float getyPosition() {
-      return yPosition;
+    return yPosition;
   }
 
   public void setyPosition(float yPosition) {
-      this.yPosition = yPosition;
+    this.yPosition = yPosition;
   }
-  
-  public void increaseCoinsCollected(){
+
+  public void increaseCoinsCollected() {
     this.coinsCollected++;
   }
 
   public int getCoinsCollected() {
-      return coinsCollected;
+    return coinsCollected;
   }
 
   public void setCoinsCollected(int coinsCollected) {
-      this.coinsCollected = coinsCollected;
+    this.coinsCollected = coinsCollected;
   }
 
   public int getMaxSpeed() {
-      return maxSpeed;
+    return maxSpeed;
   }
 
   public void setMaxSpeed(int maxSpeed) {
-      this.maxSpeed = maxSpeed;
+    this.maxSpeed = maxSpeed;
   }
 
   public int getPlayerXSpeed() {
-      return playerXSpeed;
+    return playerXSpeed;
   }
 
   public void setPlayerXSpeed(int playerXSpeed) {
-      this.playerXSpeed = playerXSpeed;
+    this.playerXSpeed = playerXSpeed;
   }
 
   public int getPlayerYSpeed() {
-      return playerYSpeed;
+    return playerYSpeed;
   }
 
   public void setPlayerYSpeed(int playerYSpeed) {
-      this.playerYSpeed = playerYSpeed;
+    this.playerYSpeed = playerYSpeed;
   }
-
 }
