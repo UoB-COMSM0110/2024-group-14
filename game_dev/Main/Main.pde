@@ -31,7 +31,7 @@ void setup() {
   player = new Player(); 
   ball = new Ball(10.0, 10.0); // TODO set some meaningful initial X, Y 
   gameService = new GameService(gameModel, ball, player);
-  page = new Page(gameModel, gameService);
+  page = new Page(gameService);
   pageNumber = 1;
   
   minim = new Minim(this);

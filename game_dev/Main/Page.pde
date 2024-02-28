@@ -1,9 +1,7 @@
 public class Page {
-  GameModel gameModel;
   GameService gameService;
   
-  Page(GameModel gameModel, GameService gameService){
-    this.gameModel = gameModel;
+  Page(GameService gameService){
     this.gameService = gameService;
   }
 

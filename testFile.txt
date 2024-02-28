@@ -1,0 +1,17 @@
+text("A huge calamity has brought the world to a halt.", 10, 120);
+    text("The concept of life is not as apparent. Mysterious ", 10, 150);
+    text("phenomenons have been occurring throughout this ", 10, 180);
+    text("universe. An inexplainable phenomenon is the ", 10, 210);
+    text("conversion of humans into animals. The poor diver ", 10, 240);
+    text("was the first to experience this - he unforunately ", 10, 270);
+    text("turned into a crab. As he claws his way through ", 10, 300);
+    text("the deep sea, he can only hope that one day he ", 10, 330);
+    text("will return back to his former self. Forunately, ", 10, 360);
+    text("there is an old wives-tale of animals converting ", 10, 390);
+    text("back to humans. It states: 'For aquatic animals the ", 10, 420);
+    text("only way to revert back to the human state, is to ", 10, 450);
+    text("venture to the depths of the ocean and reach 100 ", 10, 480);
+    text("coins.' Depending on how choppy the waters are, ", 10, 510);
+    text("the difficulty of reaching 100 coins could vary. ", 10, 540);
+    text("Now, let's get started and try to save our diver ", 10, 570);
+    text("from this horrible misfortune.", 10, 600);
