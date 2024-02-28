@@ -15,4 +15,8 @@ public class GameService{
      return false;
    }
    
+   public void invertGravity(){
+     
+   }
+   
 }
