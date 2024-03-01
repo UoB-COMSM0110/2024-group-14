@@ -6,7 +6,7 @@
 Click on the video above to view our game! 
 
 ## Team
-### Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Chun Ka Elvis Yung 
+### Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Elvis Yung 
 ![Group-14-Picture](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/group-14.JPG)
 
 ## Introduction 
@@ -122,22 +122,24 @@ The user plays the game with less than three lives lost.
 11. The game ends, and a screen pops up asking the player to either play a 'NEW GAME' or return to 'HOME'.
 
 ## Design
-~Text~
+This section is where we applied the knowledge we gained from workshops and lectures and applied it to our game. This section illustrates an overview of the system architecture of our game, in addition to the Unified Modelling Language (UML) diagrams that we created to help us and others visualise the workflow of our game. These designs heavily influenced the implementation of our game as they provided comprehensive design elements that would serve as a good starting point. Moreover, these tools and techniques solidified our understanding of the trade-offs and benefits of certain diagrams, helping us further understand and appreciate the taught material. Finally, since we chose an agile/iterative approach to our game development, these diagrams served as rough guides to help us envision and keep us on track for the final product. We found that this approach allowed for the most flexibility in terms of planning and improvements, due to the ever-changing nature of game development. 
 
 ### Class Diagram
-~Text~
+During the design process of our game, we first decided to create a class diagram before creating other diagrams as this will serve as the main guide for our implementation. The class diagram helped us represent the game's architecture design, as well as the functionality of the game mechanics. Moreover, the class diagram provides a comprehensive overview of the relationships between specific classes, depicting association and inheritance - further illustrating the usage of Object-oriented design. Likewise, the class diagram is composed of multiple classes that have attributes and methods that describe their utility in the game, helping us create the game and focus on different classes based on priority. 
 
 ![class-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/class-diagram.png)
 
-### Communication Diagram
-~Text~
-
-![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
+The class diagram also illustrates the functional components of our game, allowing others to visualise the workflow. The class diagram shows that once you enter into the main page, you can select different pages that would then load up the gameModel and Player class to start the game. With this, different methods and attributes are then associated with these classes. As the player continues into the game, classes such as Platform, Coin and Move will be used depending on the difficulty the player selected. Separating the core elements of our game into individual classes ensures the implementation of our game to be modular and maintainable. Likewise, it allows each member of the team to develop an aspect of the game in parallel without encountering merge conflicts. Furthermore, we decided to design our game based on the behavioural design pattern: Observer. Since our game has multiple classes/objects interacting with each other, we thought the observer pattern was ideal since the core principles align with our game - objects reacting to changes in another object's state. Again, this promotes a decoupled and modular architecture, further enhancing maintainability and flexibility as we develop our game.  
 
 ### Sequence Diagram
-~Text~
+With the class diagram created, we thought the next best step was to slowly implement the classes displayed in our class diagram and create a sequence diagram to further illustrate the design pattern we chose. As described above, the observer pattern perfectly encapsulates our game as we have multiple components reacting to the change in another object's state - whether that be checking collisions or updating lives and scores. That means a sequence diagram was perfect for our use case. With this, we wanted our sequence diagram to show how the player's gameplay flows as the game progresses. We showed how the player interacted with platforms, spikes, coins, lives and the score. Furthermore, we included additional information on how our game checks for collisions and relays that message back to the player the methods of certain classes and their association with the player. Overall, the sequence diagram provides a clear depiction of how the player interacts with the classes/components in the game and what the appropriate response would look like - helping us develop our game as a rough blueprint. 
 
 ![sequence-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/sequence-diagram.png)
+
+### Communication Diagram
+Lastly, we decided to create a communication diagram to help us visualise the interactions between classes in our game. Moreover, in the early stages of our planning, we realised that a difficult mechanic in our game would be detecting collisions of platforms and coins and updating the game state based on this information. Therefore, we decided to create a communication diagram to help us illustrate how the player handles input and interactions it has with other objects in our game. The communication diagram provided us with a rough guideline to develop collision detection and the game state based on the player's input. This was extremely helpful in the early stages of game development as once we understood how to handle collisions and updating the game state, we were able to slowly implement the rest of our game based on our sequence and class diagrams. 
+
+![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
 
 ## Implementation
 ~Text~
