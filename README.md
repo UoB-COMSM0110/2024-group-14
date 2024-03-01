@@ -22,7 +22,14 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 ![Paper-prototype-final-game](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/final-game.gif)
 
 ### Early stages design
-~Text~
+During the early stages of the design process, we began to iterate on the game that was chosen as our template - Rapid Roll. We wanted to incorporate elements of pixel art and retro-like aspects in our game since all of us shared fond memories of playing these games in our childhood. Because of this, Rapid Roll was the perfect game for us to develop interesting challenges and captivating lore behind our game. We believe that creating a simple, but challenging and impressionable, game would captivate the players and have them coming back for more. 
+
+During our discussions, we identified what game mechanics and graphics we would like to be incorporated in our game and drew mock-ups of what it would look like on an iPad. This allowed us to visualise the final game which motivated all of us to be invested in the development process. These images represent an early rough draft of our game with different levels incorporated and what the main game page would look like. As a team, we also wanted to immerse the player in a lore-like environment by designing our graphics based on a deep sea theme (spikes, crabs and shark teeth). Furthermore, as we continued to refine our ideas, different iterations of mock-ups were drew up to represent the ideas of the team. 
+
+Overall, the early stage design process consisted of discussions around appropriate themes, game mechanics, challenges and difficulty levels. We wanted these elements to be represented throughout our game and we believe that creating mock-ups early on helped us envision the final product. Because of this, we have a clear vision of what the game would look like and are confident that it will bring different elements of enjoyment to players.
+
+![early-stage01](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/early-stage01.png)
+![early-stage02](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/early-stage02.png)
 
 ### Technical Requirements
 - A home screen where the player can select the difficulty modes, see the controls for the game and read about the lore behind the game.
@@ -49,6 +56,7 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 
 ### Use-Case Diagram
 As a team, we created a use-case diagram to illustrate the functional components of our game to help visualise the required components in our game. During the development phase of our use-case diagram, we held discussions to identify key use cases for our users and how they interact with each component. The player interacts with the game linearly by selecting certain screen pages that display once the game starts, they can then choose specific difficulty modes, allowing the player to challenge themselves once they are familiar with our game. Furthermore, each difficulty mode will have its components that make these modes harder as you progress. With this in mind, we developed the use-case diagram based on these specifications. Likewise, our use-case diagram will serve as a basic implementation of our game, since we decided to adopt an agile development methodology, we will continuously refine our game based on our initial use-case diagram. 
+
 ![Use-case-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/use-case-diagram.png)
 
 ### Use-Case Specifications
@@ -102,9 +110,10 @@ The user plays the game with less than three lives lost.
 4. The user chooses HARD.
 5. The system generates the game interface.
 6. The user uses left and right arrow keys to control the crab to move to the next platform and collect coins to increase the number of lives.
-7. When the map switching timer shows 0, the system will automatically change a new map for the user: the platform changes to move from top to bottom.
+7. When the map switching timer shows 0, the system will automatically change a new map for the user: the platform changes to move from bottom to top. 
 8. The user controls the left and right keys and space bar to move the crab.
-9. User aims to achieve the highest possible score before running out of lives.
+9. When the timer reverts, the map will change again for the user: the platform will revert to moving from top to bottom. 
+10. User aims to achieve the highest possible score before running out of lives.
 
 **Alternative flow:**
 
@@ -117,16 +126,29 @@ The user plays the game with less than three lives lost.
 
 ### Class Diagram
 ~Text~
+
 ![class-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/class-diagram.png)
 
 ### Communication Diagram
 ~Text~
+
 ![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
 
 ### Sequence Diagram
 ~Text~
+
 ![sequence-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/sequence-diagram.png)
 
 ## Implementation
 ~Text~
+
+## Evaluation
+~Text~
+
+## Process
+~Text~
+
+## Conclusion
+~Text~
+
 
