@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage mainMenu, spikes, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
+PImage mainMenu, spikes, leaderBoardLogo, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
@@ -41,6 +41,8 @@ void setup() {
 
   mainMenu = loadImage("../assets/deep-sea2.jpg");
   spikes = loadImage("../assets/platform-spikes.png");
+  platforms = loadImage("../assets/platform01.png");
+  coinModel = loadImage("../assets/coin.png");
   livesLabel = loadImage("../assets/heart-image.png");
   scoreLabel = loadImage("../assets/score-button.png");
   backButton = loadImage("../assets/back-button.png");
@@ -58,6 +60,7 @@ void setup() {
   levelLogo = loadImage("../assets/level-image.png");
   mediumButton = loadImage("../assets/normal-button.png");
   hardButton = loadImage("../assets/hard-button.png");
+  leaderBoardLogo = loadImage("../assets/leaderboard-logo.png");
 
   howToPlayLabel = loadImage("../assets/howToPlay.png");
   leftArrowLabel = loadImage("../assets/left-arrow.png");

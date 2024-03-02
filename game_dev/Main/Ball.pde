@@ -50,5 +50,7 @@ class Ball {
 
     fill(255, 0, 0);
     ellipse(x, y, 20, 20);
+    //crabPlayer.resize(40, 40);
+    //image(crabPlayer, x, y);
   }
 }

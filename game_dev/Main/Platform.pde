@@ -30,8 +30,10 @@ class Platform {
       image(spikes, x, y);
     }
     else{
-      fill(255, 255, 255);
-      rect(x, y, 100, 20);
+      platforms.resize(100, 20);
+      image(platforms, x, y);
+      //fill(255, 255, 255);
+      //rect(x, y, 100, 20);
     }
   }
 

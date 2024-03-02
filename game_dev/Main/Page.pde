@@ -165,5 +165,9 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("Leaderboard");
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    
+    // Load Leaderboard Logo
+    leaderBoardLogo.resize(350, 0);
+    image(leaderBoardLogo, 122, 50);
   }
 }
