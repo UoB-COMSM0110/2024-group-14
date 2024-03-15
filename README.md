@@ -159,7 +159,7 @@ In terms of positive feedback, the game's visual design is considered attractive
 1. Enhance the sound effect design of the game. Especially when the player encounters an obstacle, there should be obvious sound prompts to enhance the player's immersion and reaction time.
 2. Pause while losing life to reset the ball so the player has reaction time to know where the ball is.
 3. Optimize the page. When the player restarts the game, he will enter the game page instead of jumping to the last failed page first.
-4.Add inertia to the ball movement.
+4. Add inertia to the ball movement.
 
 ## Process
 ~Text~
