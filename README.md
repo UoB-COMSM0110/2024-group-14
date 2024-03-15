@@ -155,7 +155,11 @@ Positive: The game rules are simple and clear, and players can easily understand
 Negative: When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect the game process.
 
 ![Heuristic Evaluation](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/20240315155515.png)
-
+In terms of positive feedback, the game's visual design is considered attractive, and its operation is simple and easy to use, suitable for players of different ages. But in terms of negative feedback, there are some issues that are often raised during evaluation, such as sound effects, falling speed and latency. In response to this feedback, we are considering making the following improvements:
+1. Enhance the sound effect design of the game. Especially when the player encounters an obstacle, there should be obvious sound prompts to enhance the player's immersion and reaction time.
+2. Pause while losing life to reset the ball so the player has reaction time to know where the ball is.
+3. Optimize the page. When the player restarts the game, he will enter the game page instead of jumping to the last failed page first.
+4.Add inertia to the ball movement.
 
 ## Process
 ~Text~
