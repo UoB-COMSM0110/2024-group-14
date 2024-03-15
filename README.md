@@ -145,7 +145,17 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 ~Text~
 
 ## Evaluation
-~Text~
+Qualitative Evaluations:
+Think Aloud Evaluation 1: 12/03/2024.
+Positive: The interface design of the game is very novel and fascinating.
+Negative: The sound effects are a bit simple. It would be better if there were prompts when the player encounters obstacles.
+
+Think Aloud Evaluation 2: 12/03/2024.
+Positive: The game rules are simple and clear, and players can easily understand how to operate, making this game very easy to play.
+Negative: When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect the game process.
+
+
+
 
 ## Process
 ~Text~
