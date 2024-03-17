@@ -145,7 +145,7 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 ~Text~
 
 ## Evaluation
-### Qualitative Evaluations:
+### Stage1 Qualitative Evaluations:
 #### Think Aloud Evaluation 1: 12/03/2024
 - **Positive**: The interface design of the game is very novel and fascinating.
 - **Negative**: The sound effects are a bit simple. It would be better if there were prompts when the player encounters obstacles.
