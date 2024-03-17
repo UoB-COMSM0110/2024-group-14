@@ -145,21 +145,36 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 ~Text~
 
 ## Evaluation
-Qualitative Evaluations:
-Think Aloud Evaluation 1: 12/03/2024.
-Positive: The interface design of the game is very novel and fascinating.
-Negative: The sound effects are a bit simple. It would be better if there were prompts when the player encounters obstacles.
+### Qualitative Evaluations:
+#### Think Aloud Evaluation 1: 12/03/2024
+- **Positive**: The interface design of the game is very novel and fascinating.
+- **Negative**: The sound effects are a bit simple. It would be better if there were prompts when the player encounters obstacles.
 
-Think Aloud Evaluation 2: 12/03/2024.
-Positive: The game rules are simple and clear, and players can easily understand how to operate, making this game very easy to play.
-Negative: When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect the game process.
+#### Think Aloud Evaluation 2: 12/03/2024
+- **Positive**: The game rules are simple and clear, and players can easily understand how to operate, making this game very easy to play.
+- **Negative** When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect the game process.
 
-![Heuristic Evaluation](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/20240315155515.png)
-In terms of positive feedback, the game's visual design is considered attractive, and its operation is simple and easy to use, suitable for players of different ages. But in terms of negative feedback, there are some issues that are often raised during evaluation, such as sound effects, falling speed and latency. In response to this feedback, we are considering making the following improvements:
-1. Enhance the sound effect design of the game. Especially when the player encounters an obstacle, there should be obvious sound prompts to enhance the player's immersion and reaction time.
-2. Pause while losing life to reset the ball so the player has reaction time to know where the ball is.
-3. Optimize the page. When the player restarts the game, he will enter the game page instead of jumping to the last failed page first.
-4. Add inertia to the ball movement.
+| Area        | Issue                                                                | Heuristics             | Frequency | Impact | Persistence | Severity |
+|-------------|----------------------------------------------------------------------|------------------------|-----------|--------|-------------|----------|
+| Main game   | Increase the weight to make the ball fall faster                     | User control and freedom | 1         | 2      | 2           | 1.6      |
+| Main game   | After the player runs out of lives, restart should not show last page | Visibility of system status | 3    | 3      | 3           | 3        |
+| Main game   | Delay when pressing the keyboard to move left or right               | User control and freedom | 4         | 3      | 2           | 3        |
+| Main game   | The revival prompt for the ball is not obvious                       | Visibility of system status | 4    | 2      | 3           | 3        |
+| Main game   | Unreasonable coin generation mechanism                               | Visibility of system status | 2    | 3      | 2           | 2.3      |
+| Main game   | Platforms are generated too sparingly                                | Visibility of system status | 3    | 3      | 2           | 2.6       |
+
+In terms of positive feedback, the game's visual design is considered attractive, and its operation is simple and easy to use, suitable for players of different ages. However, there are also many who offered constructive suggestions, summarized as follows:
+
+- The coin generation mechanism is unreasonable.
+- The respawn position of the ball is unreasonable.
+- There is a delay in left and right operations.
+#### Development Focus
+
+Based on the feedback collected and subsequent discussions, our next development focus will be concentrated on the following aspects:
+- Optimizing the ball's respawn mechanism to ensure users clearly understand where the ball will reappear.
+- Improving the control feel by reducing the delay in operations to enhance the player experience.
+- Considering the issue of game difficulty as mentioned in the feedback collected from users. The primary reason may be that users wish to increase the game's difficulty, which is akin to the issue of "enhancing game enjoyment" related to coin generation.
+
 
 ## Process
 ~Text~
