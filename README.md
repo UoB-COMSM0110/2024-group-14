@@ -142,17 +142,39 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 ![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
 
 ## Implementation
-~Text~
+To being the game development process, we made a list of features that would be a suitable challenge for our game. In our discussions, we mostly mentioned different game mechanics that would make an interesting feature, such as being able to obtain power-ups, defeating enemies and multiplayer. However, after many discussions, we decided on these 3 challenges for our game: 1) generative platforming/smooth gameplay, 2) generative respawn location and 3) gravity inversion with extra mechanics. We wanted players to have an enjoyable user experience as well as the difficulty and level of frustrating that comes with games. We wanted to prioritise the element of fun and competitiveness, but also deliver a well-thought-out game. Because of this, these 3 challenges were our main focus during the game development process. Furthermore, we wanted to make sure these mechanics were well-tested and implemented well. During the evaluation section, we wanted our test users to heavily critique our 3 challenges, which allowed us to further improve our game based on these suggestions. Below, we talk about the 3 challenges and the design and thought process behind the developmental phase of them. 
+
+### Generative Platforms / Smooth Gameplay
+~Text
+
+![platform-generative](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-generative.png)
+![platform-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-image.png)
+
+### Respawn Location 
+~Text
+
+![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png)
+
+### Gravity Inversion + Jumping Mechanic
+~Text
+
 
 ## Evaluation
-### Stage1 Qualitative Evaluations:
+As a team, we decided to conduct think-aloud and heuristics evaluation as this will enable us to adjust our game based on user feedback. As we've also adopted an agile approach, the iterative aspect of this would allow us to continuously improve our game based on these evaluations. Moreover, we were able to detect any usability issues before delving deeper into our game development process. This was vital as we would be able to expand our gameplay to suit all styles of players and adapt our game to that. 
+
+After the qualitative evaluations were conducted, we made improvements to our game and used NASA TLX and SUS forms to quantitatively evaluate our game. By using this, we were able to gain insight on the difficulties of our game and how it impacts players with metrics to back up our findings. Moreover, we can identify areas of improvement and make further adjustments if need be. We thoroughly enjoyed this process as we were able to display our game to others, gain insights into the difficulties of our levels through concrete metrics and iterate on our design based on the feedback given. 
+
+Lastly, as a group, we focused heavily on code testing, attempting to incorporate both black and white box methods. Since we placed a huge emphasis on giving users a seamless user experience, we thought that using both methods, it would cover most of the game's functionality from a technical and user perspective. With this, it helped us identify technical issues/bugs in our code, before shipping the final product to the masses. 
+
+### Qualitative Evaluations:
+
 #### Think Aloud Evaluation 1: 12/03/2024
 - **Positive**: The interface design of the game is very novel and fascinating.
 - **Negative**: The sound effects are a bit simple. It would be better if there were prompts when the player encounters obstacles.
 
 #### Think Aloud Evaluation 2: 12/03/2024
 - **Positive**: The game rules are simple and clear, and players can easily understand how to operate, making this game very easy to play.
-- **Negative** When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect the game process.
+- **Negative** When the player encounters an obstacle and the ball is reset, the ball quickly appears at a random location and begins to fall. As a result, the player cannot see the ball immediately and cannot smoothly connect to the game process.
 
 | Area        | Issue                                                                | Heuristics             | Frequency | Impact | Persistence | Severity |
 |-------------|----------------------------------------------------------------------|------------------------|-----------|--------|-------------|----------|
@@ -163,23 +185,31 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 | Main game   | Unreasonable coin generation mechanism                               | Visibility of system status | 2    | 3      | 2           | 2.3      |
 | Main game   | Platforms are generated too sparingly                                | Visibility of system status | 3    | 3      | 2           | 2.6       |
 
-In terms of positive feedback, the game's visual design is considered attractive, and its operation is simple and easy to use, suitable for players of different ages. However, there are also many who offered constructive suggestions, summarized as follows:
+In terms of positive feedback, the game's visual design is considered attractive, and its operation is simple and easy to use, suitable for players of different ages. However, many offered constructive suggestions, summarized as follows:
 
 - The coin generation mechanism is unreasonable.
 - The respawn position of the ball is unreasonable.
 - There is a delay in left and right operations.
+  
 #### Development Focus
-
 Based on the feedback collected and subsequent discussions, our next development focus will be concentrated on the following aspects:
 - Optimizing the ball's respawn mechanism to ensure users clearly understand where the ball will reappear.
 - Improving the control feel by reducing the delay in operations to enhance the player experience.
 - Considering the issue of game difficulty as mentioned in the feedback collected from users. The primary reason may be that users wish to increase the game's difficulty, which is akin to the issue of "enhancing game enjoyment" related to coin generation.
+
+### Quantitative Evaluations
+
+
+### Evaluation Overview
 
 
 ## Process
 ~Text~
 
 ## Conclusion
+~Text~
+
+## Individual Contributions
 ~Text~
 
 
