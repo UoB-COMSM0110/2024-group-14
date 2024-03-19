@@ -147,13 +147,13 @@ To being the game development process, we made a list of features that would be 
 ### Generative Platforms / Smooth Gameplay
 ~Text
 
-![platform-generative](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-generative.png)
-![platform-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-image.png)
+![platform-generative](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-generative.png | width=100)
+![platform-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-image.png | width=100)
 
 ### Respawn Location 
 ~Text
 
-![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png)
+![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png | width=100)
 
 ### Gravity Inversion + Jumping Mechanic
 ~Text
