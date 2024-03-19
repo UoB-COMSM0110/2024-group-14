@@ -153,7 +153,7 @@ To being the game development process, we made a list of features that would be 
 ### Respawn Location 
 ~Text
 
-![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png | width=100)
+![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png)
 
 ### Gravity Inversion + Jumping Mechanic
 ~Text
