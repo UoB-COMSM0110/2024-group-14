@@ -42,6 +42,7 @@ public class GameService {
 
   public void checkGameOver() {
     // TODO to be completed
+    if(gameModel.lives == 0) gameModel.setIsGameOver(true);
     if (ball.y > height + 30 || ball.y < 0) {
       if (!gameModel.getIsGameOver()) {
         gameService.loseLife();
@@ -179,6 +180,7 @@ public class GameService {
 
   public void respawn() {
     if (!gameService.isGameOver()) {
+      delay(500);
       ball.setSpeedY(0);
       ball.setSpeedX(0);
 
@@ -192,7 +194,7 @@ public class GameService {
 
       // Choose a random platform from non-red platforms
       if (nonRedPlatforms.size() > 0) {
-        int randomIndex = (int) random(nonRedPlatforms.size());
+        int randomIndex = (int) random(nonRedPlatforms.size()/4, 3*nonRedPlatforms.size()/4);
         Platform randomPlatform = nonRedPlatforms.get(randomIndex);
 
         // Set ball position above the chosen platform
