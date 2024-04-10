@@ -111,10 +111,6 @@ void draw() {
   }
 }
 
-void checkCollision(){
-  gameService.checkCollision();
-}
-
 void mousePressed() {
   if (pageNumber == 1) {
     // Check if the mouse is inside the Start button on Main Menu
