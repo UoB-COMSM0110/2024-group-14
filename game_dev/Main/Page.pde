@@ -146,17 +146,43 @@ public class Page {
     image(mainMenu, 0, 0, width, height);
     surface.setTitle("Help Page");
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
-    image(howToPlayLabel, (width/2 - width/4) + 3, 10, width/2, buttonHeight);
+    image(howToPlayLabel, (width / 2 - width / 4) + 3, 10, width / 2, buttonHeight);
     PFont font = createFont("../assets/pixel-font-text.ttf", 16);
     textFont(font);
-    text("Control the crab using the arrow keys", 50, 120);
-    text("and space bar", 50, 140);
-    image(leftArrowLabel, width/2 - buttonWidth/2, height/2 - buttonHeight*2, buttonWidth, buttonHeight);
-    text("Move Left", width/2 - buttonWidth/4, height/2 - buttonHeight + 30);
-    image(rightArrowLabel, width/2 - buttonWidth/2, height/2, buttonWidth, buttonHeight);
-    text("Move Right", width/2 - buttonWidth/4, height/2 + buttonHeight + 30);
-    image(spaceKeyLabel, width/2 - buttonWidth/2, height/2 + buttonHeight*2, buttonWidth, buttonHeight);
-    text("Crab Jump", width/2 - buttonWidth/4, height/2 + buttonHeight*3 + 30);
-  }
+    
+    
+    image(easyButton, 30, (height/2 - buttonHeight) - 170, smallButtonWidth, smallButtonHeight);
+    image(mediumButton, 30, (height/2 - buttonHeight) - 60, smallButtonWidth, smallButtonHeight);
+    image(hardButton, 30, (height/2 - buttonHeight) + 50, smallButtonWidth, smallButtonHeight);
+    
+    text("Platforms are not moving, spikes are", 150, 125);
+    text("obstacles to avoid.", 150, 145);
+    
+    
+    text("Platforms are moving, spikes are", 150, 235);
+    text("obstacles to avoid.", 150, 255);
+    
+    text("Platforms are moving, spikes are", 150, 345);
+    text("obstacles to avoid and gravity", 150, 365);
+    text("inverts - jumping is allowed.", 150, 385);
+    
+    float iconSize = 40; // New smaller size for the key icons
+    
+    // Left Arrow Key
+    image(leftArrowLabel, width / 2 - buttonWidth - iconSize, height - 3 * iconSize, iconSize, iconSize);
+    float leftTextWidth = textWidth("Move Left");
+    text("Move Left", width / 2 - buttonWidth - iconSize / 2 - leftTextWidth / 2, height - 3 * iconSize + iconSize + 10);
+    
+    // Right Arrow Key
+    image(rightArrowLabel, width / 2 - iconSize / 2, height - 3 * iconSize, iconSize, iconSize);
+    float rightTextWidth = textWidth("Move Right");
+    text("Move Right", width / 2 - iconSize / 4 - rightTextWidth / 2, height - 3 * iconSize + iconSize + 10);
+    
+    // Space Key
+    float spaceKeyX = width / 2 + buttonWidth / 2 + 2 * iconSize; // Adjusted x-coordinate with more offset
+    image(spaceKeyLabel, spaceKeyX, height - 3 * iconSize, iconSize, iconSize);
+    float spaceTextWidth = textWidth("Crab Jump");
+    text("Crab Jump", spaceKeyX + iconSize / 4 - spaceTextWidth / 2, height - 3 * iconSize + iconSize + 10);
+}
 
 }

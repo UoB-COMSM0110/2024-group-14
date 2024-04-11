@@ -3,7 +3,7 @@ class Platform {
   boolean isObstacle;
   boolean isMoving;
   float speed;
-  float platformSpeed = -2;
+  static final float platformSpeed = -2;
 
   Platform(float tempX, float tempY, boolean isObstacle){
    this(tempX, tempY);
@@ -44,10 +44,6 @@ class Platform {
     return ballX > x && ballX < x + 100 && ballY > y && ballY < y + 20;
   }
   
-  void setPlatformSpeed(float newSpeed) {
-    this.platformSpeed = newSpeed;
-  }
-
   void move() {
     this.y += platformSpeed;
     if (isMoving) {
