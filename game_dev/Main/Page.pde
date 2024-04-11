@@ -77,7 +77,6 @@ public class Page {
       gameService.updatePlatforms();
       gameService.updateCoins();
       gameService.checkCollision();
-      //thread("checkCollision");
       gameService.checkCollision();
       handleInput();
       gameService.checkGameOver();

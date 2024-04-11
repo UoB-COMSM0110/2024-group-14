@@ -5,6 +5,11 @@ class Platform {
   float speed;
   static final float platformSpeed = -2;
 
+  Platform(float tempX, float tempY, boolean isObstacle){
+   this(tempX, tempY);
+   this.isObstacle = isObstacle;
+  }
+
   Platform(float tempX, float tempY) {
     x = tempX;
     y = tempY;
