@@ -33,10 +33,6 @@ public class Page {
     image(aboutButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 100, buttonWidth, buttonHeight);
 
     image(helpButton, (width/2 - buttonWidth/2) + 3, (height/2 - buttonHeight) + 200, buttonWidth, buttonHeight);
-
-    // Loading Leaderboard Button
-    //scoreBoardButton.resize(350, 0);
-    image(scoreBoardButton, width/2 - buttonWidth/2, (height/2 - buttonHeight) + 300, buttonWidth, buttonHeight);
   }
 
   private void drawStatusBar() {
@@ -44,6 +40,8 @@ public class Page {
     rect(0, 0, width, statusBarHeight);
     image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
     image(scoreLabel, backButtonX + backButtonWidth + 10, backButtonY, backButtonWidth, backButtonHeight);
+    coinModelLabel.resize(35, 35);
+    image(coinModelLabel, backButtonX + 350, backButtonY);
     gameService.drawLivesOnScreen();
     gameService.displayScore();
   }
@@ -161,13 +159,4 @@ public class Page {
     text("Crab Jump", width/2 - buttonWidth/4, height/2 + buttonHeight*3 + 30);
   }
 
-  public void leaderboardPage() {
-    image(mainMenu, 0, 0, width, height);
-    surface.setTitle("Leaderboard");
-    image(backButton, backButtonX, backButtonY, backButtonWidth, backButtonHeight);
-    
-    // Load Leaderboard Logo
-    leaderBoardLogo.resize(350, 0);
-    image(leaderBoardLogo, 122, 50);
-  }
 }

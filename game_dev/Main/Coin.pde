@@ -9,8 +9,6 @@ class Coin {
   public void display() {
     coinModel.resize(22, 22);
     image(coinModel, x, y);
-    //fill(255, 255, 0); // Yellow color for coins
-    //ellipse(x, y, 20, 20);
   }
   
   public void move(){

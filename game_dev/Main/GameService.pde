@@ -82,6 +82,13 @@ public class GameService {
   public void updatePlatforms() {
     for (int i = platforms.size() - 1; i >= 0; i--) {
       Platform p = platforms.get(i);
+
+      // Check if the game level is set to "EASY"
+      if (gameModel.getLevel().equals("EASY")) {
+        // If it's EASY, disable platform movement and red platforms
+        p.isMoving = false; // Set platform as not moving
+      }
+
       p.move();
       p.display();
     }
@@ -100,7 +107,7 @@ public class GameService {
     if (platforms.get(0).y < 0) {
       platforms.remove(0);
     }
-  }
+}
 
   public void drawLivesOnScreen() {
     int lives = gameModel.getLives();
@@ -176,9 +183,9 @@ public class GameService {
   }
 
   public void displayCollectedCoins() {
-    textSize(20);
-    fill(255);
-    text("Coins: " + player.getCoinsCollected(), 20, 30);
+    textSize(25);
+    fill(0,0,0);
+    text(player.getCoinsCollected(), backButtonX + 395, 30);
   }
   
   public void updateBall(){
