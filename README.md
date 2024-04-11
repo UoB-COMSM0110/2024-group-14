@@ -145,13 +145,19 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 To being the game development process, we made a list of features that would be a suitable challenge for our game. In our discussions, we mostly mentioned different game mechanics that would make an interesting feature, such as being able to obtain power-ups, defeating enemies and multiplayer. However, after many discussions, we decided on these 3 challenges for our game: 1) generative platforming/smooth gameplay, 2) generative respawn location and 3) gravity inversion with extra mechanics. We wanted players to have an enjoyable user experience as well as the difficulty and level of frustrating that comes with games. We wanted to prioritise the element of fun and competitiveness, but also deliver a well-thought-out game. Because of this, these 3 challenges were our main focus during the game development process. Furthermore, we wanted to make sure these mechanics were well-tested and implemented well. During the evaluation section, we wanted our test users to heavily critique our 3 challenges, which allowed us to further improve our game based on these suggestions. Below, we talk about the 3 challenges and the design and thought process behind the developmental phase of them. 
 
 ### Generative Platforms / Smooth Gameplay
-~Text
+To achieve a seamless user experience, as a team, we decided to provide smooth gaming experiences for our users by adding generative platforms to our games. This new approach not only made each stage unique but created a dynamic and ever-changing environment for our players to navigate. By using generative design, we were able to deliver a new and unexpected gaming experience and keep our players engaged.
+
+Additionally, the unique and dynamic nature of our generation platforms inspires creativity and strategic thinking in our players. They constantly challenged their playing styles to adapt to an ever-changing environment, which kept them engaged and deeply enjoyable This not only added depth to the gameplay but infused life networking and also encouraged community engagement as players shared their experiences and strategies.
 
 ![platform-generative](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-generative.png)
 ![platform-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/platform-image.png)
 
 ### Respawn Location 
-~Text
+The respawn mechanics presented us with a unique challenge in terms of game design, as determining the right platform and location for player re-engagement was critical to maintaining the flow of gameplay and players as they got involved. As a team, we implemented a dynamic respawn system that prioritized player experience and ensured smooth progression through the game.
+
+Where there was no suitable platforms available for respawn, we generated new platforms to accompany this. Not only did this change demonstrate our commitment to enhancing the gaming experience, but it also added an element of unpredictability and excitement for players. By constantly changing progress and adjusting to suit the needs of the players, we aim to keep them on their toes and challenge their skills and techniques.
+
+Additionally, our new respawn system also contributed to an immersive and fluid gaming experience, reducing downtime and keeping players actively engaged in the action. Therefore, this minimized disruption and provided fast and strategic respawn options, which maintained a fast-paced and exciting gaming environment for players. Likewise, it encouraged players to make changes and improve their game plans.
 
 ![respawn](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/respawn.png)
 
