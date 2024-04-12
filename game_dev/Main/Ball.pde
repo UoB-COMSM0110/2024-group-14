@@ -5,6 +5,8 @@ class Ball {
   float maxSpeed = 5;
   float dampingY = 0.9f; // Damping factor for vertical motion
   float dampingX = 0.8f; // Damping factor for horizontal motion
+  boolean canJump = false;  // Flag to check if the ball can jump
+  float jumpStrength = -10;  // Strength of the jump
 
   Ball(float initialX, float initialY) {
     x = initialX;
@@ -43,6 +45,13 @@ class Ball {
     this.y = y;
   }
 
+  void jump() {
+    if (canJump) {
+      speedY = jumpStrength;
+      canJump = false;  // Disable jumping until the ball lands
+    }
+  }
+
   void update(float gravity) {
     speedY += gravity;
     y += speedY;
@@ -54,7 +63,15 @@ class Ball {
 
     x = constrain(x, 0, width);
 
+    // Check if the ball is on the ground
+    if (y >= height - 10) { // Assuming the ground is at y = height - 10
+      y = height - 10; // Set the ball's position to the ground level
+      speedY = 0; // Stop the vertical motion
+      canJump = true; // Enable jumping
+    }
+
     fill(255, 165, 0);
     ellipse(x, y, 20, 20);
   }
+
 }
