@@ -16,6 +16,8 @@ public class GameService {
   }
 
   public void initializeGame() {
+    platforms.clear();
+    coins.clear();
     for (int i = 0; i < height; i += platformInterval) {
       Platform platform = new Platform(random(width - 100), height - i - platformInterval);
       platforms.add(platform);
@@ -25,6 +27,11 @@ public class GameService {
         coins.add(coin);
       }
     }
+    Platform goodPlatform = new Platform(random(width - 100), height/2, false);
+    platforms.add(goodPlatform);
+    ball.setY(goodPlatform.y - 10);
+    ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
+    
     gameModel.setScore(0);
     gameModel.setLives(3);
     gameModel.setIsGameOver(false);
@@ -75,6 +82,13 @@ public class GameService {
   public void updatePlatforms() {
     for (int i = platforms.size() - 1; i >= 0; i--) {
       Platform p = platforms.get(i);
+
+      // Check if the game level is set to "EASY"
+      if (gameModel.getLevel().equals("EASY")) {
+        // If it's EASY, disable platform movement and red platforms
+        p.isMoving = false; // Set platform as not moving
+      }
+
       p.move();
       p.display();
     }
@@ -93,7 +107,7 @@ public class GameService {
     if (platforms.get(0).y < 0) {
       platforms.remove(0);
     }
-  }
+}
 
   public void drawLivesOnScreen() {
     int lives = gameModel.getLives();
@@ -169,9 +183,9 @@ public class GameService {
   }
 
   public void displayCollectedCoins() {
-    textSize(20);
-    fill(255);
-    text("Coins: " + player.getCoinsCollected(), 20, 30);
+    textSize(25);
+    fill(0,0,0);
+    text(player.getCoinsCollected(), backButtonX + 395, 30);
   }
   
   public void updateBall(){
@@ -192,15 +206,10 @@ public class GameService {
         }
       }
 
-      // Choose a random platform from non-red platforms
-      if (nonRedPlatforms.size() > 0) {
-        int randomIndex = (int) random(nonRedPlatforms.size()/4, 3*nonRedPlatforms.size()/4);
-        Platform randomPlatform = nonRedPlatforms.get(randomIndex);
-
-        // Set ball position above the chosen platform
-        ball.setY(randomPlatform.y - 10);
-        ball.setX(randomPlatform.getX() + randomPlatform.getWidth() / 2);
-      }
+      Platform goodPlatform = new Platform(random(width - 100), height/2, false);
+      platforms.add(goodPlatform);
+      ball.setY(goodPlatform.y - 10);
+      ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
     }
   }
 }

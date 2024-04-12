@@ -3,13 +3,15 @@ class Ball {
   float speedY = 0;
   float speedX = 0;
   float maxSpeed = 5;
+  float dampingY = 0.9f; // Damping factor for vertical motion
+  float dampingX = 0.8f; // Damping factor for horizontal motion
 
   Ball(float initialX, float initialY) {
     x = initialX;
     y = initialY;
   }
 
-  public void setSpeedX(int speedX) {
+  public void setSpeedX(float speedX) {
     this.speedX = speedX;
   }
 
@@ -21,7 +23,7 @@ class Ball {
     return this.speedY;
   }
 
-  public void setSpeedY(int speedY) {
+  public void setSpeedY(float speedY) {
     this.speedY = speedY;
   }
 
@@ -46,11 +48,13 @@ class Ball {
     y += speedY;
     x += speedX;
 
+    // Apply damping to simulate inertia
+    speedY *= dampingY;
+    speedX *= dampingX;
+
     x = constrain(x, 0, width);
 
-    fill(255, 0, 0);
+    fill(255, 165, 0);
     ellipse(x, y, 20, 20);
-    //crabPlayer.resize(40, 40);
-    //image(crabPlayer, x, y);
   }
 }
