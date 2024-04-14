@@ -278,11 +278,38 @@ final scores: (There are decimals in the calculation result, and the final resul
 | Weighted | 36 | 24 | 42 | 27 | 28 | 31 | 25 | 23 | 27 | 27 |  
 
 Statistic testing:  
-To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness.
+To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode.  
+First calculate the difference in each pair of comparisons, subtracting the hard mode value from the easy mode value to get Table 1, then remove the zero values, because if the difference is zero, they will not have an impact on the test result. Then we calculated the rank, we looked up relevant information（[1]）, and for the same values, we used the average rank. Then we calculated the positive rank and negative rank (as shown in Table 2), and took the smaller rank as the W value.
 
+(Table 1)
+| User ID | Easy mode | Hard mode | differences |
+|----------|----------|----------|----------|
+| U1  | 34  | 36  | 2  |
+| U2  | 20  | 24  | 4  |
+| U3  | 33  | 42  | 9  |
+| U4  | 26  | 27  | 1  |
+| U5  | 25  | 28  | 3  |
+| U6  | 30  | 31  | 1  |
+| U7  | 26  | 25  | -1 |
+| U8  | 23  | 23  | 0  |
+| U9  | 24  | 37  | 13 |
+| U10 | 27  | 27  | 0  |  
+
+After removing 0 values:
+(Table 2)
+| Differences | Rank | Signed Rank |
+|----------|----------|----------|
+| 1  |  2  | +2  |
+| 1  |  2  | +2  |
+| 1  |  2  | -2  |
+| 2  |  4  | +4  |
+| 3  |  5  | +5  |
+| 4  |  6  | +6  |
+| 9  |  7  | +7  |
+| 13 |  8  | +8  |  
 
 ### Evaluation Overview
-
+Based on the above results, it is calculated that the sum of positive ranks is 34 and the sum of negative ranks is 2, so the w value is 2, which is less than the alpha value of 8 when n is equal to 10. This shows that the difference between simple mode and hard mode is significant. Enter the results into the online calculator https://www.statskingdom.com/175wilcoxon_signed_ranks.html to get rhe p value, which is 0.029, and compare the p-value to the significance level, which is less than the significance level 0.05, which means we can reject the null hypothesis and prove that there is a significant increase in difficulty in hard mode.
 
 ## Process
 ~Text~
@@ -292,5 +319,8 @@ To explore whether there is a significant difference between the two difficulty 
 
 ## Individual Contributions
 ~Text~
+
+## References
+[1]I. C. Anaene Oyeka and G. U. Ebuh, “Modified Wilcoxon Signed-Rank Test,” Open Journal of Statistics, vol. 02, no. 02, pp. 172–176, 2012, doi: https://doi.org/10.4236/ojs.2012.22019.
 
 
