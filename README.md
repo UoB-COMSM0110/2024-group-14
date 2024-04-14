@@ -222,9 +222,24 @@ Evaluation 1: "Easy" mode.
 | U10 | 10  | 5   | 45  |  25  |  15  | 5   |
 
 Dimension weighting：  
-![weighting-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/weighting-easy.png)  
+| User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
+|----------|----------|----------|----------|----------|----------|----------|
+| U1  | 1  | 1  | 4  |  4  |  4  | 1  |
+| U2  | 2  | 1  | 3  |  4  |  3  | 2  |
+| U3  | 1  | 1  | 3  |  4  |  4  | 2  |
+| U4  | 2  | 1  | 3  |  4  |  3  | 2  |
+| U5  | 2  | 2  | 3  |  3  |  3  | 2  |
+| U6  | 1  | 1  | 4  |  4  |  4  | 1  |
+| U7  | 2  | 1  | 3  |  3  |  4  | 2  |
+| U8  | 1  | 2  | 3  |  4  |  3  | 2  |
+| U9  | 2  | 0  | 4  |  4  |  3  | 2  |
+| U10 | 1  | 0  | 4  |  4  |  4  | 2  |
 Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
-![finalscore-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/finalscore-easy.png)  
+| Score type  |  U1  | U2 | U3 | U4 | U5 | U6 | U7 | U8 | U9 | U10 |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Raw | 19 | 19 | 18 | 20 | 20 | 18 | 23 | 17 | 23 | 18 |
+| Weighted | 25 | 20 | 24 | 23 | 22 | 25 | 24 | 19 | 24 | 24 |
+ 
 Evaluation 2: 'Hard' mode.  
 
 ### Evaluation Overview
