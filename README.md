@@ -212,7 +212,8 @@ Evaluation 1: "Easy" mode.
 Dimension weighting：  
 ![weighting-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/weighting-easy.png)  
 Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
-
+![finalscore-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/finalscore-easy.png)  
+Evaluation 2: 'Hard' mode.  
 
 ### Evaluation Overview
 
