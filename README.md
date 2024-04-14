@@ -208,7 +208,19 @@ In the quantitative evaluation, we focused on evaluating the difficulty of the g
 The evaluation was conducted at a single point in time after the completion of the development sprint. We collected data from a diverse group of 10 participants. Each participant played the game twice, once in “easy” mode and once in “hard” mode. To ensure a consistent gaming experience, each session was conducted in a controlled environment, with participants playing the entire game until they achieved a win condition or exhausted their allotted lives. This controlled setting allows for direct comparison of the two difficulty settings without introducing confusion that can be caused by changes in game interaction, such as differences in the player's skill level or external distractions. The following describes the results of this evaluation in detail, including using the Wilcoxon sign rank test to conduct a comparative analysis of NASA TLX scores between the two difficulty settings to identify the specific impact of game difficulty on player experience.  
 Evaluating the gameplay:  
 Evaluation 1: "Easy" mode.  
-![easy_score](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/easy-score.png)  
+| User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
+|----------|----------|----------|----------|----------|----------|----------|
+| U1  | 10  | 10  | 45  |  20  |  20  | 10  |
+| U2  | 20  | 15  | 40  |  15  |  20  | 5   |
+| U3  | 5   | 5   | 35  |  25  |  30  | 10  |
+| U4  | 15  | 10  | 40  |  20  |  25  | 15  |
+| U5  | 20  | 20  | 30  |  25  |  20  | 10  |
+| U6  | 10  | 5   | 45  |  30  |  15  | 5   |
+| U7  | 15  | 20  | 35  |  20  |  30  | 15  |
+| U8  | 5   | 10  | 40  |  15  |  25  | 5   |
+| U9  | 20  | 20  | 30  |  20  |  30  | 15  |
+| U10 | 10  | 5   | 45  |  25  |  15  | 5   |
+
 Dimension weighting：  
 ![weighting-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/weighting-easy.png)  
 Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
