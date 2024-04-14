@@ -321,6 +321,8 @@ To ensure efficient management of work progress and timely completion of the pro
 
 Throughout the process, we deeply appreciated the importance of close collaboration. The close cooperation of team members helped build the project piece by piece, greatly boosting team morale and motivation. Our primary means of contact was through WhatsApp, which greatly facilitated our response to emergencies encountered during the week's work and allowed team members to stay closely connected. This ensured that, no matter when or where an issue arose, team members could quickly respond and provide support.
 
+![whats app](report_material/kanbanboard/7234f5a1725d1e6c6ad95fd5f1a498a.jpg)
+
 Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
 
 In conclusion, this teamwork experience was extremely valuable. It not only taught us how to effectively manage a complex project but also let us experience the power of teamwork. We look forward to continuing to use agile development principles in future work, bringing more success!
