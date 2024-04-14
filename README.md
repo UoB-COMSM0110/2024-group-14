@@ -234,7 +234,9 @@ Dimension weighting：
 | U8  | 1  | 2  | 3  |  4  |  3  | 2  |
 | U9  | 2  | 0  | 4  |  4  |  3  | 2  |
 | U10 | 1  | 0  | 4  |  4  |  4  | 2  |
+
 Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
+
 | Score type  |  U1  | U2 | U3 | U4 | U5 | U6 | U7 | U8 | U9 | U10 |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | Raw | 19 | 19 | 18 | 20 | 20 | 18 | 23 | 17 | 23 | 18 |
