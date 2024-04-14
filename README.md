@@ -279,6 +279,7 @@ final scores: (There are decimals in the calculation result, and the final resul
 
 Statistic testing:  
 To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode.  
+We need to evaluate multiple load dimensions and allow users to compare on pairwise dimensions, so our wilconxon signed rank test is more suitable for analysis using relatively weighted NASA TLX results. [2]
 First calculate the difference in each pair of comparisons, subtracting the hard mode value from the easy mode value to get Table 1, then remove the zero values, because if the difference is zero, they will not have an impact on the test result. Then we calculated the rank, we looked up relevant information（[1]）, and for the same values, we used the average rank. Then we calculated the positive rank and negative rank (as shown in Table 2), and took the smaller rank as the W value.
 
 (Table 1)
@@ -323,4 +324,5 @@ Based on the above results, it is calculated that the sum of positive ranks is 3
 ## References
 [1]I. C. Anaene Oyeka and G. U. Ebuh, “Modified Wilcoxon Signed-Rank Test,” Open Journal of Statistics, vol. 02, no. 02, pp. 172–176, 2012, doi: https://doi.org/10.4236/ojs.2012.22019.
 
+[2]“Measuring Workload – Test Science 3.0.” https://testscience.org/measuring-workload/
 
