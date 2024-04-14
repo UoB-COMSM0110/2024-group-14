@@ -206,20 +206,21 @@ Based on the feedback collected and subsequent discussions, our next development
 ### Quantitative Evaluations
 In the quantitative evaluation, we focused on evaluating the difficulty of the game, especially comparing "Easy" and "Hard" modes. This distinction was very important, as differences in difficulty settings can have a significant impact on player experience and enjoyment. This evaluation utilized the NASA Task Load Index (TLX) to obtain a weighted score that reflects the subjective workload experienced by players at each difficulty level. (All ratings are from his March 18, 2024 to April 1, 2024)
 The evaluation was conducted at a single point in time after the completion of the development sprint. We collected data from a diverse group of 10 participants. Each participant played the game twice, once in “easy” mode and once in “hard” mode. To ensure a consistent gaming experience, each session was conducted in a controlled environment, with participants playing the entire game until they achieved a win condition or exhausted their allotted lives. This controlled setting allows for direct comparison of the two difficulty settings without introducing confusion that can be caused by changes in game interaction, such as differences in the player's skill level or external distractions. The following describes the results of this evaluation in detail, including using the Wilcoxon sign rank test to conduct a comparative analysis of NASA TLX scores between the two difficulty settings to identify the specific impact of game difficulty on player experience.  
+
 Evaluating the gameplay:  
 Evaluation 1: "Easy" mode.  
 | User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
 |----------|----------|----------|----------|----------|----------|----------|
-| U1  | 10  | 10  | 45  |  20  |  20  | 10  |
+| U1  | 10  | 10  | 45  |  55  |  20  | 10  |
 | U2  | 20  | 15  | 40  |  15  |  20  | 5   |
-| U3  | 5   | 5   | 35  |  25  |  30  | 10  |
-| U4  | 15  | 10  | 40  |  20  |  25  | 15  |
-| U5  | 20  | 20  | 30  |  25  |  20  | 10  |
-| U6  | 10  | 5   | 45  |  30  |  15  | 5   |
-| U7  | 15  | 20  | 35  |  20  |  30  | 15  |
-| U8  | 5   | 10  | 40  |  15  |  25  | 5   |
-| U9  | 20  | 20  | 30  |  20  |  30  | 15  |
-| U10 | 10  | 5   | 45  |  25  |  15  | 5   |
+| U3  | 5   | 5   | 35  |  60  |  30  | 10  |
+| U4  | 15  | 10  | 40  |  30  |  25  | 15  |
+| U5  | 20  | 20  | 30  |  40  |  20  | 10  |
+| U6  | 10  | 5   | 45  |  45  |  15  | 5   |
+| U7  | 15  | 20  | 35  |  30  |  30  | 15  |
+| U8  | 5   | 10  | 40  |  30  |  25  | 5   |
+| U9  | 20  | 20  | 30  |  25  |  30  | 15  |
+| U10 | 10  | 5   | 45  |  35  |  15  | 5   |
 
 Dimension weighting：  
 | User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
@@ -239,10 +240,46 @@ Final scores (There are decimals in the calculation result, and the final result
 
 | Score type  |  U1  | U2 | U3 | U4 | U5 | U6 | U7 | U8 | U9 | U10 |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| Raw | 19 | 19 | 18 | 20 | 20 | 18 | 23 | 17 | 23 | 18 |
-| Weighted | 25 | 20 | 24 | 23 | 22 | 25 | 24 | 19 | 24 | 24 |
+| Raw | 25 | 19 | 24 | 23 | 23 | 21 | 24 | 19 | 23 | 19 |
+| Weighted | 34 | 20 | 33 | 26 | 25 | 30 | 26 | 23 | 25 | 27 |
  
 Evaluation 2: 'Hard' mode.  
+| User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
+|----------|----------|----------|----------|----------|----------|----------|
+| U1  | 30  | 20  | 55  |  20  |  45  | 30  |
+| U2  | 35  | 15  | 40  |  15  |  20  | 15  |
+| U3  | 35  | 25  | 50  |  25  |  60  | 30  |
+| U4  | 25  | 20  | 40  |  20  |  35  | 20  |
+| U5  | 25  | 20  | 50  |  25  |  25  | 20  |
+| U6  | 10  | 20  | 45  |  30  |  30  | 15  |
+| U7  | 15  | 15  | 35  |  20  |  40  | 5   |
+| U8  | 5   | 10  | 40  |  15  |  35  | 5   |
+| U9  | 20  | 20  | 30  |  20  |  40  | 15  |
+| U10 | 10  | 10  | 45  |  25  |  25  | 10  |  
+
+Dimension weighting:  
+| User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
+|----------|----------|----------|----------|----------|----------|----------|
+| U1  | 2  | 1  | 3  |  4  |  4  | 1  |
+| U2  | 2  | 1  | 3  |  3  |  4  | 2  |
+| U3  | 1  | 1  | 4  |  3  |  4  | 2  |
+| U4  | 2  | 1  | 3  |  3  |  4  | 2  |
+| U5  | 2  | 2  | 3  |  2  |  3  | 3  |
+| U6  | 1  | 1  | 4  |  4  |  4  | 1  |
+| U7  | 2  | 1  | 3  |  3  |  4  | 2  |
+| U8  | 1  | 2  | 3  |  3  |  4  | 2  |
+| U9  | 2  | 0  | 4  |  3  |  4  | 2  |
+| U10 | 1  | 0  | 4  |  4  |  4  | 2  |  
+
+final scores: (There are decimals in the calculation result, and the final result is the result after rounding.)  
+| Score type  |  U1  | U2 | U3 | U4 | U5 | U6 | U7 | U8 | U9 | U10 |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Raw | 33 | 23 | 38 | 27 | 28 | 25 | 22 | 18 | 24 | 21 |
+| Weighted | 36 | 24 | 42 | 27 | 28 | 31 | 25 | 23 | 27 | 27 |  
+
+Statistic testing:  
+To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness.
+
 
 ### Evaluation Overview
 
