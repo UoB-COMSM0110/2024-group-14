@@ -208,7 +208,11 @@ In the quantitative evaluation, we focused on evaluating the difficulty of the g
 The evaluation was conducted at a single point in time after the completion of the development sprint. We collected data from a diverse group of 10 participants. Each participant played the game twice, once in “easy” mode and once in “hard” mode. To ensure a consistent gaming experience, each session was conducted in a controlled environment, with participants playing the entire game until they achieved a win condition or exhausted their allotted lives. This controlled setting allows for direct comparison of the two difficulty settings without introducing confusion that can be caused by changes in game interaction, such as differences in the player's skill level or external distractions. The following describes the results of this evaluation in detail, including using the Wilcoxon sign rank test to conduct a comparative analysis of NASA TLX scores between the two difficulty settings to identify the specific impact of game difficulty on player experience.  
 Evaluating the gameplay:  
 Evaluation 1: "Easy" mode.  
-![easy_score](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/easy-score.png)
+![easy_score](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/easy-score.png)  
+Dimension weighting：  
+![weighting-easy](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/weighting-easy.png)  
+Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
+
 
 ### Evaluation Overview
 
