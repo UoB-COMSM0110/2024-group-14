@@ -313,7 +313,17 @@ After removing 0 values:
 Based on the above results, it is calculated that the sum of positive ranks is 34 and the sum of negative ranks is 2, so the w value is 2, which is less than the alpha value of 8 when n is equal to 10. This shows that the difference between simple mode and hard mode is significant. Enter the results into the online calculator https://www.statskingdom.com/175wilcoxon_signed_ranks.html to get rhe p value, which is 0.029, and compare the p-value to the significance level, which is less than the significance level 0.05, which means we can reject the null hypothesis and prove that there is a significant increase in difficulty in hard mode.
 
 ## Process
-~Text~
+This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. At the beginning of the project, we established a clear division of labor, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing reports and collecting user test data. This division of labor allowed each person to maximize their effectiveness in their areas of expertise.
+![teams meetingn](report_material/kanbanboard/14-feb-2024-teams.png)
+
+To ensure efficient management of work progress and timely completion of the project, we adopted agile development principles. The flexibility of agile development was crucial to the success of our project, allowing us to quickly adapt to changes and continuously improve our workflow. Additionally, we used Kanban as our main tool to track the progress of each task. This visualization tool not only helped us clarify weekly task goals but also promoted transparent communication among team members.
+![kan ban](report_material/kanbanboard/13-03-kanbanboard.png)
+
+Throughout the process, we deeply appreciated the importance of close collaboration. The close cooperation of team members helped build the project piece by piece, greatly boosting team morale and motivation. Our primary means of contact was through WhatsApp, which greatly facilitated our response to emergencies encountered during the week's work and allowed team members to stay closely connected. This ensured that, no matter when or where an issue arose, team members could quickly respond and provide support.
+
+Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
+
+In conclusion, this teamwork experience was extremely valuable. It not only taught us how to effectively manage a complex project but also let us experience the power of teamwork. We look forward to continuing to use agile development principles in future work, bringing more success!
 
 ## Conclusion
 ~Text~
