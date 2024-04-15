@@ -342,7 +342,11 @@ To conclude, this teamwork experience was extremely valuable not only to our pro
 Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban-boards throughout our project and [HERE](./report_material/images/) to our WhatsApp texts and other report materials. 
 
 ## Conclusion
-~Text~
+In our team's game development process, the application of agile development principles significantly enhanced the project's flexibility and efficiency. Through rapid iterations and adjustments based on user feedback, we were able to promptly identify and resolve issues within the game design, ensuring a continuously optimized gameplay experience. Regular communication via platforms like WhatsApp and structured meetings not only maintained high team morale and productivity but also facilitated swift information flow and immediate problem resolution.
+
+Moreover, using Git for version control and Kanban boards to manage tasks brought organization and transparency to our development process, ensuring efficient collaboration among team members and consistency with project goals. In terms of game design, by introducing unique gameplay twists like moving platforms and a retro pixel art style, we successfully created a game that appeals to both new players and nostalgics alike.
+
+This agile and adaptive development approach not only improved the technical quality of the game but also strengthened the dynamic collaboration within the team. Each iteration was an enhancement not just of the game's features but also of our team's operational methods. Through continuous testing and refinement, we ensured that the game would perform optimally upon release. Moving forward, we plan to continue employing this flexible development methodology to stay responsive to rapidly changing market demands and technological advancements, keeping our products competitive.
 
 ## Individual Contributions
 | Name | Student ID | Contribution | 
