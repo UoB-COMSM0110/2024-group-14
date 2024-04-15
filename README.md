@@ -337,7 +337,7 @@ Throughout the process, we deeply appreciated the importance of close collaborat
 
 Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development and communication. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
 
-To Conclude, this teamwork experience was extremely valuable not only to our professional, but personal development. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
+To conclude, this teamwork experience was extremely valuable not only to our professional, but personal development. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
 
 Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban-boards throughout our project and [HERE](./report_material/images/) to our WhatsApp texts and other report materials. 
 
@@ -345,7 +345,13 @@ Clicking [HERE](./report_material/kanbanboard/) will link you to the directory c
 ~Text~
 
 ## Individual Contributions
-~Text~
+| Name | Student ID | Contribution | 
+|----------|----------|----------|
+| Chun Ka Elvis Yung  | kt20672  | 1.00  |
+| Hao Lu  | bm23997  | 1.00 |
+| Jiarong Zhang  | mr23123  | 1.00  | 
+| Boyang Lin  | jn23914  | 1.00 |
+| Tanmay Mishra  | fu23194  | 1.00 | 
 
 ## References
 [1] I. C. Anaene Oyeka and G. U. Ebuh, “Modified Wilcoxon Signed-Rank Test,” Open Journal of Statistics, vol. 02, no. 02, pp. 172–176, 2012, doi: https://doi.org/10.4236/ojs.2012.22019.
