@@ -185,7 +185,7 @@ Lastly, as a group, we focused heavily on code testing, attempting to incorporat
 | Area        | Issue                                                                | Heuristics             | Frequency | Impact | Persistence | Severity |
 |-------------|----------------------------------------------------------------------|------------------------|-----------|--------|-------------|----------|
 | Main game   | Increase the weight to make the ball fall faster                     | User control and freedom | 1         | 2      | 2           | 1.6      |
-| Main game   | After the player runs out of lives, restart should not show last page | Visibility of system status | 3    | 3      | 3           | 3        |
+| Main game   | After the player runs out of lives, restart should not show the last page | Visibility of system status | 3    | 3      | 3           | 3        |
 | Main game   | Delay when pressing the keyboard to move left or right               | User control and freedom | 4         | 3      | 2           | 3        |
 | Main game   | The revival prompt for the ball is not obvious                       | Visibility of system status | 4    | 2      | 3           | 3        |
 | Main game   | Unreasonable coin generation mechanism                               | Visibility of system status | 2    | 3      | 2           | 2.3      |
@@ -204,7 +204,8 @@ Based on the feedback collected and subsequent discussions, our next development
 - Considering the issue of game difficulty as mentioned in the feedback collected from users. The primary reason may be that users wish to increase the game's difficulty, which is akin to the issue of "enhancing game enjoyment" related to coin generation.
 
 ### Quantitative Evaluations
-In the quantitative evaluation, we focused on evaluating the difficulty of the game, especially comparing "Easy" and "Hard" modes. This distinction was very important, as differences in difficulty settings can have a significant impact on player experience and enjoyment. This evaluation utilized the NASA Task Load Index (TLX) to obtain a weighted score that reflects the subjective workload experienced by players at each difficulty level. (All ratings are from his March 18, 2024 to April 1, 2024)
+In the quantitative evaluation, we focused on evaluating the difficulty of the game, especially comparing "Easy" and "Hard" modes. This distinction was very important, as differences in difficulty settings can have a significant impact on player experience and enjoyment. This evaluation utilized the NASA Task Load Index (TLX) to obtain a weighted score that reflects the subjective workload experienced by players at each difficulty level (All ratings are from March 18, 2024 to April 1, 2024).
+
 The evaluation was conducted at a single point in time after the completion of the development sprint. We collected data from a diverse group of 10 participants. Each participant played the game twice, once in “easy” mode and once in “hard” mode. To ensure a consistent gaming experience, each session was conducted in a controlled environment, with participants playing the entire game until they achieved a win condition or exhausted their allotted lives. This controlled setting allows for direct comparison of the two difficulty settings without introducing confusion that can be caused by changes in game interaction, such as differences in the player's skill level or external distractions. The following describes the results of this evaluation in detail, including using the Wilcoxon sign rank test to conduct a comparative analysis of NASA TLX scores between the two difficulty settings to identify the specific impact of game difficulty on player experience.  
 
 **Evaluating the gameplay:**  
@@ -236,7 +237,7 @@ Dimension weighting：
 | U9  | 2  | 0  | 4  |  4  |  3  | 2  |
 | U10 | 1  | 0  | 4  |  4  |  4  | 2  |
 
-Final scores (There are decimals in the calculation result, and the final result is the result after rounding.)  
+Final scores (There are decimals in the calculation result, and the final result is the result after rounding)  
 
 | Score type  |  U1  | U2 | U3 | U4 | U5 | U6 | U7 | U8 | U9 | U10 |
 |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -278,9 +279,9 @@ final scores: (There are decimals in the calculation result, and the final resul
 | Weighted | 36 | 24 | 42 | 27 | 28 | 31 | 25 | 23 | 27 | 27 |  
 
 Statistic testing:  
-To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode.  
-We need to evaluate multiple load dimensions and allow users to compare on pairwise dimensions, so our wilconxon signed rank test is more suitable for analysis using relatively weighted NASA TLX results. [2]
-First calculate the difference in each pair of comparisons, subtracting the hard mode value from the easy mode value to get Table 1, then remove the zero values, because if the difference is zero, they will not have an impact on the test result. Then we calculated the rank, we looked up relevant information（[1]）, and for the same values, we used the average rank. Then we calculated the positive rank and negative rank (as shown in Table 2), and took the smaller rank as the W value.
+To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode. We need to evaluate multiple load dimensions and allow users to compare on pairwise dimensions, so our Wilcoxon signed rank test is more suitable for analysis using relatively weighted NASA TLX results [2].
+
+First calculate the difference in each pair of comparisons, subtracting the hard mode value from the easy mode value to get Table 1, then remove the zero values, because if the difference is zero, they will not have an impact on the test result. Then we calculated the rank, looked up relevant information [1], and for the same values, we used the average rank. Then we calculated the positive rank and negative rank (as shown in Table 2), and took the smaller rank as the W value.
 
 (Table 1)
 | User ID | Easy mode | Hard mode | differences |
@@ -310,22 +311,35 @@ After removing 0 values:
 | 13 |  8  | +8  |  
 
 ### Evaluation Overview
-Based on the above results, it is calculated that the sum of positive ranks is 34 and the sum of negative ranks is 2, so the w value is 2, which is less than the alpha value of 8 when n is equal to 10. This shows that the difference between simple mode and hard mode is significant. Enter the results into the online calculator https://www.statskingdom.com/175wilcoxon_signed_ranks.html to get rhe p value, which is 0.029, and compare the p-value to the significance level, which is less than the significance level 0.05, which means we can reject the null hypothesis and prove that there is a significant increase in difficulty in hard mode.
+Based on the above results, it is calculated that the sum of positive ranks is 34 and the sum of negative ranks is 2, so the w value is 2, which is less than the alpha value of 8 when n is equal to 10. This shows that the difference between simple mode and hard mode is significant. Enter the results into the online calculator https://www.statskingdom.com/175wilcoxon_signed_ranks.html to get the p-value, which is 0.029, and compare the p-value to the significance level, which is less than the significance level of 0.05, which means we can reject the null hypothesis and prove that there is a significant increase in difficulty in hard mode.
+
+### Testing Code
+~Text~
 
 ## Process
-This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. At the beginning of the project, we established a clear division of labor, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing reports and collecting user test data. This division of labor allowed each person to maximize their effectiveness in their areas of expertise.
-![teams meetingn](report_material/kanbanboard/14-feb-2024-teams.png)
+This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. Likewise, during each meeting, each member takes turn being responsible for note-keeping and summarizing the key points discussed during the meeting. At the beginning of the project, we established a clear division of labour, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing sections of the report, collecting user test data and conducting quantitative and qualitative reports. This division of labour allowed each person to maximize their effectiveness in their areas of expertise. Moreover, we allowed each member to be flexible in their areas of strengths and experience different areas if they choose to, this allowed us to be more cohesive as a team as we were all familiar with the development process of our game. 
 
-To ensure efficient management of work progress and timely completion of the project, we adopted agile development principles. The flexibility of agile development was crucial to the success of our project, allowing us to quickly adapt to changes and continuously improve our workflow. Additionally, we used Kanban as our main tool to track the progress of each task. This visualization tool not only helped us clarify weekly task goals but also promoted transparent communication among team members.
-![kan ban](report_material/kanbanboard/13-03-kanbanboard.png)
+![teams-meetings](report_material/kanbanboard/14-feb-2024-teams.png)
 
-Throughout the process, we deeply appreciated the importance of close collaboration. The close cooperation of team members helped build the project piece by piece, greatly boosting team morale and motivation. Our primary means of contact was through WhatsApp, which greatly facilitated our response to emergencies encountered during the week's work and allowed team members to stay closely connected. This ensured that, no matter when or where an issue arose, team members could quickly respond and provide support.
+Likewise, we utilised Git as version control to track the progress of our game and make necessary changes as the weeks progressed. During the beginning stages of our game development, we discussed heavily on the importance of Git, establishing separate branches for each team member and the workflow of using Git in a team. Likewise, before merging from develop to Main, we would create a pull request and have someone review it, ensuring quality control and a working main at all times - weekly merges of main were conducted. This was extended to our separate branches as well, where a team member would review the merge of own-branch to develop, ensuring the develop branch is working as well. As a team, we were receptive to this and supported each other if one of our members was lagging due to the unfamiliarity with Git. This set up for success as we did not encounter any major merge conflicts throughout the game development process, due to the stern rules in place before the project began. This made the development process more efficient and streamlined, which increased moral and enjoyment throughout this project. 
 
-![whats app](report_material/kanbanboard/7234f5a1725d1e6c6ad95fd5f1a498a.jpg)
+![branches](report_material/images/branches.png)
 
-Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
+![workflow](report_material/images/workflow.png)
 
-In conclusion, this teamwork experience was extremely valuable. It not only taught us how to effectively manage a complex project but also let us experience the power of teamwork. We look forward to continuing to use agile development principles in future work, bringing more success!
+To ensure efficient management of work progress and timely completion of the project, we adopted agile development principles at the beginning of our game. The flexibility of agile development was crucial to the success of our project, allowing us to quickly adapt to changes and continuously improve our workflow. Additionally, we used Kanban and Kanban boards as our main tools to track the progress of each task. This visualization tool not only helped us clarify weekly task goals but also promoted transparent communication among team members. Likewise, this way of communication allowed each team member to pick up tasks outside their strengths and work on other areas. We thoroughly enjoyed using kanban boards and an agile development style as it played to our team's strength in continuously improving on past weeks, which contributed to our robust and well-thought game. 
+
+![kanbanboards](report_material/kanbanboard/13-03-kanbanboard.png)
+
+Throughout the process, we deeply appreciated the importance of close collaboration. The close cooperation of team members helped build the project piece by piece, greatly boosting team morale and motivation. Our primary means of contact was through WhatsApp, which greatly facilitated our response to emergencies encountered during the week's work and allowed team members to stay closely connected. This ensured no matter when or where an issue arose, team members could quickly respond and provide support. 
+
+![recent-whatsapp](report_material/kanbanboard/whatsapp05.jpg)
+
+Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development and communication. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
+
+To Conclude, this teamwork experience was extremely valuable not only to our professional, but personal development. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
+
+Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban-boards throughout our project and [HERE](./report_material/images/) to our WhatsApp texts and other report materials. 
 
 ## Conclusion
 ~Text~
@@ -334,7 +348,7 @@ In conclusion, this teamwork experience was extremely valuable. It not only taug
 ~Text~
 
 ## References
-[1]I. C. Anaene Oyeka and G. U. Ebuh, “Modified Wilcoxon Signed-Rank Test,” Open Journal of Statistics, vol. 02, no. 02, pp. 172–176, 2012, doi: https://doi.org/10.4236/ojs.2012.22019.
+[1] I. C. Anaene Oyeka and G. U. Ebuh, “Modified Wilcoxon Signed-Rank Test,” Open Journal of Statistics, vol. 02, no. 02, pp. 172–176, 2012, doi: https://doi.org/10.4236/ojs.2012.22019.
 
-[2]“Measuring Workload – Test Science 3.0.” https://testscience.org/measuring-workload/
+[2] “Measuring Workload – Test Science 3.0.” https://testscience.org/measuring-workload/
 
