@@ -142,7 +142,7 @@ Lastly, we decided to create a communication diagram to help us visualise the in
 ![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
 
 ## Implementation
-To being the game development process, we made a list of features that would be a suitable challenge for our game. In our discussions, we mostly mentioned different game mechanics that would make an interesting feature, such as being able to obtain power-ups, defeating enemies and multiplayer. However, after many discussions, we decided on these 3 challenges for our game: 1) generative platforming/smooth gameplay, 2) generative respawn location and 3) gravity inversion with extra mechanics. We wanted players to have an enjoyable user experience as well as the difficulty and level of frustrating that comes with games. We wanted to prioritise the element of fun and competitiveness, but also deliver a well-thought-out game. Because of this, these 3 challenges were our main focus during the game development process. Furthermore, we wanted to make sure these mechanics were well-tested and implemented well. During the evaluation section, we wanted our test users to heavily critique our 3 challenges, which allowed us to further improve our game based on these suggestions. Below, we talk about the 3 challenges and the design and thought process behind the developmental phase of them. 
+To begin the game development process, we made a list of features that would be a suitable challenge for our game. In our discussions, we mostly mentioned different game mechanics that would make an interesting feature, such as being able to obtain power-ups, defeating enemies and multiplayer. However, after many discussions, we decided on these 3 challenges for our game: 1) generative platforming/smooth gameplay, 2) generative respawn location and 3) gravity inversion with extra mechanics. We wanted players to have an enjoyable user experience as well as the difficulty and level of frustrating that comes with games. We wanted to prioritise the element of fun and competitiveness, but also deliver a well-thought-out game. Because of this, these 3 challenges were our main focus during the game development process. Furthermore, we wanted to make sure these mechanics were well-tested and implemented well. During the evaluation section, we wanted our test users to heavily critique our 3 challenges, which allowed us to further improve our game based on these suggestions. Below, we talk about the 3 challenges and the design and thought process behind the developmental phase of them. 
 
 ### Generative Platforms / Smooth Gameplay
 To achieve a seamless user experience, as a team, we decided to provide smooth gaming experiences for our users by adding generative platforms to our games. This new approach not only made each stage unique but created a dynamic and ever-changing environment for our players to navigate. By using generative design, we were able to deliver a new and unexpected gaming experience and keep our players engaged.
@@ -223,7 +223,7 @@ Evaluation 1: "Easy" mode.
 | U9  | 20  | 20  | 30  |  25  |  30  | 15  |
 | U10 | 10  | 5   | 45  |  35  |  15  | 5   |
 
-Dimension weighting：  
+Dimension weighting:  
 | User ID | Mental demand | Physical demand | Temporal demand | Performance | Effort | Frustration |
 |----------|----------|----------|----------|----------|----------|----------|
 | U1  | 1  | 1  | 4  |  4  |  4  | 1  |
