@@ -2,6 +2,7 @@ class Ball {
   float x, y;
   float speedY = 0;
   float speedX = 0;
+  boolean jumpState;
   float maxSpeed = 5;
   float dampingY = 0.9f; // Damping factor for vertical motion
   float dampingX = 0.8f; // Damping factor for horizontal motion
@@ -10,7 +11,16 @@ class Ball {
 
   Ball(float initialX, float initialY) {
     x = initialX;
+    jumpState = false;
     y = initialY;
+  }
+  
+  public void setJumpState(boolean jumpState){
+     this.jumpState = jumpState;
+  }
+  
+  public boolean getJumpState(){
+   return this.jumpState; 
   }
 
   public void setSpeedX(float speedX) {
@@ -70,7 +80,7 @@ class Ball {
       canJump = true; // Enable jumping
     }
 
-    fill(255, 165, 0);
+    fill(255, 100, 0);
     ellipse(x, y, 20, 20);
   }
 

@@ -82,10 +82,15 @@ public class Page {
       gameService.displayScore();
       gameService.drawLivesOnScreen();
       gameService.displayJumpText();  // Add this line to display the jump text
+      if(keyPressed && key == ' '){
+        gameService.jumpBall();
+      }
     } else {
       gameService.displayGameOver();
-      if (keyPressed && (key == 'r' || key == 'R')) {
-        gameService.initializeGame();
+      if(keyPressed){
+        if (key == 'r' || key == 'R') {
+          gameService.initializeGame();
+        }
       }
     }
   }

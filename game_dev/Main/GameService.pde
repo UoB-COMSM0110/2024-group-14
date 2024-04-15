@@ -74,6 +74,32 @@ public class GameService {
   public void gameOver() {
     gameModel.setLives(0);
   }
+  
+  public void jumpBall(){
+     if(!gameModel.getLevel().equals("HARD")) return;
+     if(ball.getJumpState()) return;
+     //float speed = ball.getSpeedY();
+     //float gravityAcceleration = 0.75;
+     //while (ball.getSpeedY() >1 ) { 
+     // ball.setY(ball.getY()-speed);
+     // ball.setSpeedY(ball.getSpeedY() * gravityAcceleration);
+     //}
+     // gravityAcceleration = -1.25;
+     // ball.setSpeedY(ball.getSpeedY() * gravityAcceleration);
+     // ball.setY(ball.getY()-speed);
+      
+     // while (ball.getSpeedY() < -1 && ball.getSpeedY() > -10) {
+     //   ball.setY(ball.getY()-speed);
+     //   speed = speed * gravityAcceleration;
+     // }
+     // gravityAcceleration = 0.75;
+     // ball.setSpeedY(0);
+     ball.setJumpState(true);
+     ball.update(gameModel.getGravity()*(-25));
+     ball.setJumpState(false);
+     //delay(1000);
+     //ball.update(gameModel.getGravity()*(-1)/25);
+  }
 
   public boolean checkCoinCollision() {
     // TODO to be completed
