@@ -119,7 +119,7 @@ public class GameService {
         // If it's EASY, disable platform movement and red platforms
         p.isMoving = false; // Set platform as not moving
       }
-
+      
       p.move();
       p.display();
     }
@@ -292,8 +292,6 @@ public void startJumpTimer() {
     }
 }
     
-
-
   public boolean canJump() {
     return canJump;
   }
