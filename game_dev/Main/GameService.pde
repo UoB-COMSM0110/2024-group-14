@@ -1,3 +1,6 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class GameService {
   private GameModel gameModel;
   private Ball ball;
@@ -5,6 +8,9 @@ public class GameService {
   ArrayList<Platform> platforms;
   ArrayList<Coin> coins;
   final int platformInterval = 150;
+  private boolean canJump = true;
+  private Timer jumpTimer;
+  private boolean displayJumpText = false;
 
   public GameService(GameModel gameModel, Ball ball, Player player) {
     this.gameModel = gameModel;
@@ -48,11 +54,10 @@ public class GameService {
   }
 
   public void checkGameOver() {
-    // TODO to be completed
-    if(gameModel.lives == 0) gameModel.setIsGameOver(true);
+    if(gameModel.getLives() == 0) gameModel.setIsGameOver(true);
     if (ball.y > height + 30 || ball.y < 0) {
       if (!gameModel.getIsGameOver()) {
-        gameService.loseLife();
+        loseLife();
         if (gameModel.getLives() > 0) {
           respawn();
         } else {
@@ -68,6 +73,32 @@ public class GameService {
 
   public void gameOver() {
     gameModel.setLives(0);
+  }
+  
+  public void jumpBall(){
+     if(!gameModel.getLevel().equals("HARD")) return;
+     if(ball.getJumpState()) return;
+     //float speed = ball.getSpeedY();
+     //float gravityAcceleration = 0.75;
+     //while (ball.getSpeedY() >1 ) { 
+     // ball.setY(ball.getY()-speed);
+     // ball.setSpeedY(ball.getSpeedY() * gravityAcceleration);
+     //}
+     // gravityAcceleration = -1.25;
+     // ball.setSpeedY(ball.getSpeedY() * gravityAcceleration);
+     // ball.setY(ball.getY()-speed);
+      
+     // while (ball.getSpeedY() < -1 && ball.getSpeedY() > -10) {
+     //   ball.setY(ball.getY()-speed);
+     //   speed = speed * gravityAcceleration;
+     // }
+     // gravityAcceleration = 0.75;
+     // ball.setSpeedY(0);
+     ball.setJumpState(true);
+     ball.update(gameModel.getGravity()*(-25));
+     ball.setJumpState(false);
+     //delay(1000);
+     //ball.update(gameModel.getGravity()*(-1)/25);
   }
 
   public boolean checkCoinCollision() {
@@ -88,7 +119,7 @@ public class GameService {
         // If it's EASY, disable platform movement and red platforms
         p.isMoving = false; // Set platform as not moving
       }
-
+      
       p.move();
       p.display();
     }
@@ -107,7 +138,7 @@ public class GameService {
     if (platforms.get(0).y < 0) {
       platforms.remove(0);
     }
-}
+  }
 
   public void drawLivesOnScreen() {
     int lives = gameModel.getLives();
@@ -133,11 +164,11 @@ public class GameService {
     for (Platform p : platforms) {
       if (p.checkCollision(x, y + 10)) {
         if (p.isObstacle()) {
-          gameService.loseLife();
-          if (!gameService.isGameOver()) {
-            gameService.respawn();
+          loseLife();
+          if (!isGameOver()) {
+            respawn();
           } else {
-            gameService.gameOver();
+            gameOver();
           }
           return;
         }
@@ -159,9 +190,6 @@ public class GameService {
         break;
       }
     }
-
-    //float depth = height - y;
-    //score += (int) (depth / 100);
   }
 
   public void updateCoins() {
@@ -188,12 +216,27 @@ public class GameService {
     text(player.getCoinsCollected(), backButtonX + 395, 30);
   }
   
-  public void updateBall(){
-    ball.update(gameModel.getGravity());
+  public void updateBall() {
+        ball.update(gameModel.getGravity());
+
+        // Start the jump timer for HARD level
+        if (gameModel.getLevel().equals("HARD") && canJump()) {
+            startJumpTimer();
+        }
+
+        // Check if the jump time has expired
+        if (!canJump() && jumpTimer != null) {
+            jumpTimer.cancel();
+            jumpTimer.purge();
+        }
+    }
+
+public Ball getBall() {
+    return ball;
   }
 
   public void respawn() {
-    if (!gameService.isGameOver()) {
+    if (!isGameOver()) {
       delay(500);
       ball.setSpeedY(0);
       ball.setSpeedX(0);
@@ -211,5 +254,45 @@ public class GameService {
       ball.setY(goodPlatform.y - 10);
       ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
     }
+  }
+
+public void startJumpTimer() {
+    if (gameModel.getLevel().equals("HARD")) {
+        canJump = true;
+        displayJumpText = false;  // Initialize the flag to false
+
+        jumpTimer = new Timer();
+        jumpTimer.schedule(new TimerTask() {
+            int count = 0;
+
+            @Override
+            public void run() {
+                if (count == 20) {  // 20 * 1 second = 20 seconds
+                    displayJumpText = true;  // Set flag to true to display the jump text
+                } else if (count == 25) {  // 25 * 1 second = 25 seconds
+                    canJump = false;
+                    displayJumpText = false;  // Set flag to false to stop displaying the jump text
+                    jumpTimer.cancel();
+                    jumpTimer.purge();
+                } else if (count == 30) {  // 30 * 1 second = 30 seconds
+                    displayJumpText = false;  // Set flag to false to hide the jump text
+                }
+                count++;
+            }
+        }, 0, 1000);  // delay 0, repeat every 1 second
+    }
+}
+
+    
+    public void displayJumpText() {
+    if (displayJumpText) {
+        textSize(20);
+        fill(255, 0, 0);  // Set text color to red
+        text("5 seconds left to jump!", width / 4, height / 2);  // Display text on screen
+    }
+}
+    
+  public boolean canJump() {
+    return canJump;
   }
 }

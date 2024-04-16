@@ -75,32 +75,44 @@ public class Page {
       gameService.updatePlatforms();
       gameService.updateCoins();
       gameService.checkCollision();
-      gameService.checkCollision();
       handleInput();
       gameService.checkGameOver();
       gameService.updateScore();
       gameService.displayCollectedCoins();
       gameService.displayScore();
       gameService.drawLivesOnScreen();
+      gameService.displayJumpText();  // Add this line to display the jump text
+      if(keyPressed && key == ' '){
+        gameService.jumpBall();
+      }
     } else {
       gameService.displayGameOver();
-      if (keyPressed && (key == 'r' || key == 'R')) {
-        gameService.initializeGame();
+      if(keyPressed){
+        if (key == 'r' || key == 'R') {
+          gameService.initializeGame();
+        }
       }
     }
   }
 
-  public void handleInput() {
-    if (keyPressed) {
-      if (keyCode == LEFT) {
-        ball.speedX = -ball.maxSpeed;
-      } else if (keyCode == RIGHT) {
-        ball.speedX = ball.maxSpeed;
+public void handleInput() {
+  Ball ball = gameService.getBall();  // Get the Ball object from the gameService
+  
+  if (keyPressed) {
+    if (keyCode == LEFT) {
+      ball.setSpeedX(-ball.maxSpeed);
+    } else if (keyCode == RIGHT) {
+      ball.setSpeedX(ball.maxSpeed);
+    } else if (key == ' ') {  // Space bar pressed
+      if (gameModel.getLevel().equals("HARD")) {  // Check if level is HARD
+        ball.jump();  // Trigger the jump
       }
-    } else {
-      ball.speedX = 0;
     }
+  } else {
+    ball.setSpeedX(0);
   }
+}
+
 
   public void aboutPage() {
     image(mainMenu, 0, 0, width, height);
