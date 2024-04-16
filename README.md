@@ -313,7 +313,26 @@ After removing 0 values:
 Based on the above results, it is calculated that the sum of positive ranks is 34 and the sum of negative ranks is 2, so the w value is 2, which is less than the alpha value of 8 when n is equal to 10. This shows that the difference between simple mode and hard mode is significant. Enter the results into the online calculator https://www.statskingdom.com/175wilcoxon_signed_ranks.html to get the p-value, which is 0.029, and compare the p-value to the significance level, which is less than the significance level of 0.05, which means we can reject the null hypothesis and prove that there is a significant increase in difficulty in hard mode.
 
 ### Testing Code
-~Text~
+When developing the game's code, we employed both white-box and black-box testing methodologies. White-box testing focused on verifying the output of each code segment, aiming for complete Statement Coverage. We achieved this by breaking down the code into individual modules and testing each one separately to ensure they aligned with the intended design and functionality. This involved various methods, such as evaluating the output of each code step to ensure it met the expected criteria.
+
+Black-box testing was also conducted on the entire game to validate if the game's inputs corresponded correctly with the outputs. Utilizing the Equivalence Partitioning (EP) Method, we segmented the game's input into distinct categories and tested each with the corresponding input to verify that the final game outcome met the specified criteria. The effectiveness of black-box testing for a game is assessed by integrating various input scenarios and determining whether the resulting output aligns with our game expectations.
+
+Here is the combination we derived from the Equivalence Partitioning (EP) Method:
+| Category | Description | Partition |  
+|----------|----------|----------|
+| Valid Player Health | PH_1 | 0 <= Player Health <= 5 |
+| Invalid Player Health | PH_2 | Player Health > 5 |
+| Invalid Player Health | PH_3 | Player Health < 0 |
+| Valid GameOver | GO_1 | gameModel.setLives(0) |
+| Invalid GameOver | GO_2 | gameModel.setLives(0) != 0 |
+| Valid Player Collision on Platforms | PCH_1 | checkCollision() == true |
+| Invalid Player Collision on Platforms | PCH_2 | checkCollision() == false |
+| Valid Player Collision on Spikes | PCS_1 | checkCollision().isObstacle() == true |
+| Invalid Player Collision on Spikes | PCS_2 | checkCollision().isObstacle() == false |
+| Valid Player Collision on Coin | PCC_1 | checkCollision() == true |
+| Invalid Player Collision on Coin | PCC_2 | checkCollision() == false |
+| Valid Player Jump | PJ_1 | canJump == true |
+| Invalid Player Jump | PJ_2 | canJump == false |
 
 ## Process
 This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. Likewise, during each meeting, each member takes turn being responsible for note-keeping and summarizing the key points discussed during the meeting. At the beginning of the project, we established a clear division of labour, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing sections of the report, collecting user test data and conducting quantitative and qualitative reports. This division of labour allowed each person to maximize their effectiveness in their areas of expertise. Moreover, we allowed each member to be flexible in their areas of strengths and experience different areas if they choose to, this allowed us to be more cohesive as a team as we were all familiar with the development process of our game. 
