@@ -1,9 +1,34 @@
 # 2024-group-14
+## Table of Contents
+1. [Game Video](#game-video)
+   - [Deep Sea Fall](#deep-sea-fall)
+2. [Team](#team)
+3. [Introduction](#introduction)
+4. [Requirements](#requirements)
+   - [Ideation Process](#ideation-process)
+   - [Early stages design](#early-stages-design)
+   - [Technical Requirements](#technical-requirements)
+   - [User stories](#user-stories)
+   - [Use-Case Diagram](#use-case-diagram)
+   - [Use-Case Specifications](#use-case-specifications)
+5. [Design](#design)
+   - [Class Diagram](#class-diagram)
+   - [Sequence Diagram](#sequence-diagram)
+   - [Communication Diagram](#communication-diagram)
+6. [Implementation](#implementation)
+7. [Evaluation](#evaluation)
+   - [Qualitative Evaluations](#qualitative-evaluations)
+   - [Quantitative Evaluations](#quantitative-evaluations)
+8. [Process](#process)
+9. [Conclusion](#conclusion)
+10. [Individual Contributions](#individual-contributions)
+11. [References](#references)
 
 ## Game Video
 ### Deep Sea Fall
 
 Click on the video above to view our game! 
+
 
 ## Team
 ### Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Elvis Yung 
