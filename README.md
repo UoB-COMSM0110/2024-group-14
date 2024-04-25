@@ -1,4 +1,5 @@
-# 2024-group-14
+<h1 align="center">University of Bristol<br>Software Engineering - Group 14 (2024)</h1>
+
 ## Table of Contents
 1. [Game Video](#game-video)
    - [Deep Sea Fall](#deep-sea-fall)
