@@ -5,6 +5,11 @@ class Platform {
   float speed;
   static final float platformSpeed = -2;
 
+  Platform(float tempX, float tempY, boolean isObstacle){
+   this(tempX, tempY);
+   this.isObstacle = isObstacle;
+  }
+
   Platform(float tempX, float tempY) {
     x = tempX;
     y = tempY;
@@ -32,15 +37,13 @@ class Platform {
     else{
       platforms.resize(100, 20);
       image(platforms, x, y);
-      //fill(255, 255, 255);
-      //rect(x, y, 100, 20);
     }
   }
 
   boolean checkCollision(float ballX, float ballY) {
     return ballX > x && ballX < x + 100 && ballY > y && ballY < y + 20;
   }
-
+  
   void move() {
     this.y += platformSpeed;
     if (isMoving) {
