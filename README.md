@@ -1,4 +1,5 @@
 <h1 align="center">University of Bristol<br>Software Engineering - Group 14 (2024)</h1>
+![deep sea fall](report_material/images/e45cf978b3978db542194d88877e1d4.png)
 
 ## Table of Contents
 1. [Game Video](#game-video)
