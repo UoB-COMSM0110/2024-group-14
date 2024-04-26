@@ -32,6 +32,7 @@
 ## Game Video
 ### Deep Sea Fall
 [![deep-sea-fall-image](report_material/images/e45cf978b3978db542194d88877e1d4.png)](https://www.youtube.com/watch?v=dPGMfqa_MJc)
+
 Click on the image above to view our game! 
 
 ## Team
