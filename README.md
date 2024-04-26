@@ -4,7 +4,6 @@
   <img src="report_material/images/e45cf978b3978db542194d88877e1d4.png" alt="deep sea fall">
 </p>
 
-
 ## Table of Contents
 1. [Game Video](#game-video)
    - [Deep Sea Fall](#deep-sea-fall)
@@ -32,7 +31,7 @@
 
 ## Game Video
 ### Deep Sea Fall
-
+![deep-sea-fall-image](report_material/images/e45cf978b3978db542194d88877e1d4.png)[https://www.youtube.com/watch?v=dPGMfqa_MJc]
 Click on the video above to view our game! 
 
 
