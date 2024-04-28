@@ -1,0 +1,12 @@
+
+
+Git WorkFlow
+
+1. Check what branch you are currently on and switch to your own branch for development purposes. 'git checkout own-branch'
+2. Do a 'git pull origin develop' to have the latest version of development to avoid merge conflicts in the future. 
+3. Basic Github Workflow: 'git add .' 'git commit -m "msg"' 'git push origin own-branch' 
+4. Create a pull request from own-branch to develop and have someone on the team review it before merging. 
+5. Weekly Merges of main was conducted - someone from the team would create a pull request to merge develop to main and have 2 people review it. 
+
+
+
