@@ -128,7 +128,7 @@ The user plays the game with less than three lives lost.
 10. The game ends, and a screen pops up asking the player to either play a 'NEW GAME' or return to 'HOME'.
 
 **Hard mode:**
-The system adds an ascending map, map switch timer, and jumping functions based on the medium mode.
+The system adds jumping functions and additional obstacles based on the medium mode.
 
 **Basic flow:**
 The user plays the game with less than three lives lost.
