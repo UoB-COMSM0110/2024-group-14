@@ -57,7 +57,7 @@ class Platform {
   void display() {
     //fill(platColor);
     if(isHardObstacle){
-      tickingBomb.resize(100, 20);
+      tickingBomb.resize(30, 20);
       image(tickingBomb, x, y);
     }
     else if(isObstacle){

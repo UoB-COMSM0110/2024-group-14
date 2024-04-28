@@ -209,10 +209,7 @@ public class GameService {
   }
 
   public void updateScore() {
-    if (ball.speedY > 0) {
-      // Increase the score based on the ball's vertical speed or any other criteria
-      gameModel.setScore(gameModel.getScore() + (int) ball.speedY);  // Adjust the scoring mechanism as needed
-    }
+    gameModel.setScore(gameModel.getScore()+1);
   }
 
   public void displayCollectedCoins() {
@@ -225,15 +222,15 @@ public class GameService {
         ball.update(gameModel.getGravity());
 
         // Start the jump timer for HARD level
-        if (gameModel.getLevel().equals("HARD") && canJump()) {
-            startJumpTimer();
-        }
+        //if (gameModel.getLevel().equals("HARD") && canJump()) {
+        //    startJumpTimer();
+        //}
 
-        // Check if the jump time has expired
-        if (!canJump() && jumpTimer != null) {
-            jumpTimer.cancel();
-            jumpTimer.purge();
-        }
+        //// Check if the jump time has expired
+        //if (!canJump() && jumpTimer != null) {
+        //    jumpTimer.cancel();
+        //    jumpTimer.purge();
+        //}
     }
 
 public Ball getBall() {
@@ -262,30 +259,30 @@ public Ball getBall() {
   }
 
 public void startJumpTimer() {
-    if (gameModel.getLevel().equals("HARD")) {
-        canJump = true;
-        displayJumpText = false;  // Initialize the flag to false
+    //if (gameModel.getLevel().equals("HARD")) {
+    //    canJump = true;
+    //    displayJumpText = false;  // Initialize the flag to false
 
-        jumpTimer = new Timer();
-        jumpTimer.schedule(new TimerTask() {
-            int count = 0;
+    //    jumpTimer = new Timer();
+    //    jumpTimer.schedule(new TimerTask() {
+    //        int count = 0;
 
-            @Override
-            public void run() {
-                if (count == 20) {  // 20 * 1 second = 20 seconds
-                    displayJumpText = true;  // Set flag to true to display the jump text
-                } else if (count == 25) {  // 25 * 1 second = 25 seconds
-                    canJump = false;
-                    displayJumpText = false;  // Set flag to false to stop displaying the jump text
-                    jumpTimer.cancel();
-                    jumpTimer.purge();
-                } else if (count == 30) {  // 30 * 1 second = 30 seconds
-                    displayJumpText = false;  // Set flag to false to hide the jump text
-                }
-                count++;
-            }
-        }, 0, 1000);  // delay 0, repeat every 1 second
-    }
+    //        @Override
+    //        public void run() {
+    //            if (count == 20) {  // 20 * 1 second = 20 seconds
+    //                displayJumpText = true;  // Set flag to true to display the jump text
+    //            } else if (count == 25) {  // 25 * 1 second = 25 seconds
+    //                canJump = false;
+    //                displayJumpText = false;  // Set flag to false to stop displaying the jump text
+    //                jumpTimer.cancel();
+    //                jumpTimer.purge();
+    //            } else if (count == 30) {  // 30 * 1 second = 30 seconds
+    //                displayJumpText = false;  // Set flag to false to hide the jump text
+    //            }
+    //            count++;
+    //        }
+    //    }, 0, 1000);  // delay 0, repeat every 1 second
+    //}
 }
 
     
