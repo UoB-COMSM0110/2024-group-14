@@ -9,10 +9,12 @@ class Ball {
   boolean canJump = false;  // Flag to check if the ball can jump
   float jumpStrength = -10;  // Strength of the jump
 
-  Ball(float initialX, float initialY) {
+  Ball(float initialX, float initialY, String mode) {
     x = initialX;
     jumpState = false;
     y = initialY;
+    if(mode.equals("HARD")) maxSpeed = 8;
+    //this.speedY = speedY;
   }
   
   public void setJumpState(boolean jumpState){

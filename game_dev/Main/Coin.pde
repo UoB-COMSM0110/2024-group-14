@@ -1,9 +1,10 @@
 class Coin {
   private float x, y;
-  static final float coinSpeed = -2;
-  Coin(float tempX, float tempY) {
+  float coinSpeed = -2;
+  Coin(float tempX, float tempY, float coinSpeed) {
     x = tempX;
     y = tempY;
+    this.coinSpeed = coinSpeed;
   }
 
   public void display() {

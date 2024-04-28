@@ -3,16 +3,36 @@ class Platform {
   boolean isObstacle;
   boolean isMoving;
   float speed;
-  static final float platformSpeed = -5;
+  boolean isHardObstacle;
+  GameModel gameModel;
+  float platformSpeed;
 
-  Platform(float tempX, float tempY, boolean isObstacle){
-   this(tempX, tempY);
+  Platform(float tempX, float tempY, boolean isObstacle, GameModel gameModel){
+   this(tempX, tempY, gameModel);
    this.isObstacle = isObstacle;
   }
+  
+  public float getPlatformSpeed(){
+     return this.platformSpeed; 
+  }
+  Platform(float tempX, float tempY, boolean isObstacle, GameModel gameModel, boolean isMoving, float speedY) {
+    this(tempX, tempY, gameModel);
+    this.isMoving = isMoving;
+    this.isObstacle = isObstacle;
+    this.platformSpeed = speedY;
+    this.isHardObstacle = true;
+  }
 
-  Platform(float tempX, float tempY) {
+  Platform(float tempX, float tempY, GameModel gameModel) {
     x = tempX;
     y = tempY;
+    this.gameModel = gameModel;
+    if(gameModel.getLevel().equals("HARD")){
+      platformSpeed = -5;
+    }
+    else{
+      platformSpeed = -2;
+    }
 
     if (random(1) < 0.33) { // Red Platform
       isObstacle = true;
@@ -21,7 +41,13 @@ class Platform {
     }
 
     isMoving = random(1) < 0.5;
-    speed = random(-2, 2);
+    if(gameModel.getLevel().equals("HARD")){
+      speed = random(-5, 5);
+    }
+    else{
+      speed = random(-2, 2);
+    }
+    
   }
   
   boolean isObstacle(){
@@ -30,7 +56,11 @@ class Platform {
 
   void display() {
     //fill(platColor);
-    if(isObstacle){
+    if(isHardObstacle){
+      tickingBomb.resize(100, 20);
+      image(tickingBomb, x, y);
+    }
+    else if(isObstacle){
       spikes.resize(100, 20);
       image(spikes, x, y);
     }

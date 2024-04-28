@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage coinModelLabel, mainMenu, spikes, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
+PImage coinModelLabel, tickingBomb, mainMenu, spikes, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
@@ -31,7 +31,7 @@ void setup() {
   textColor = color(255);
   gameModel = new GameModel();
   player = new Player();
-  ball = new Ball(10.0, 10.0); // TODO set some meaningful initial X, Y
+  ball = new Ball(10.0, 10.0, gameModel.getLevel()); // TODO set some meaningful initial X, Y
   gameService = new GameService(gameModel, ball, player);
   page = new Page(gameService);
   pageNumber = 1;
@@ -42,6 +42,7 @@ void setup() {
   gamePlayer = minim.loadFile("../assets/music/gameplay-music.mp3");
 
   mainMenu = loadImage("../assets/deep-sea2.jpg");
+  tickingBomb = loadImage("../assets/ticking-bomb.png");
   spikes = loadImage("../assets/platform-spikes.png");
   platforms = loadImage("../assets/platform01.png");
   coinModel = loadImage("../assets/coin.png");

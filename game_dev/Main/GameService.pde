@@ -25,15 +25,15 @@ public class GameService {
     platforms.clear();
     coins.clear();
     for (int i = 0; i < height; i += platformInterval) {
-      Platform platform = new Platform(random(width - 100), height - i - platformInterval);
+      Platform platform = new Platform(random(width - 100), height - i - platformInterval, gameModel);
       platforms.add(platform);
 
       if (random(1) < 0.2) {
-        Coin coin = new Coin(platform.x + random(20, 80), platform.y - 20);
+        Coin coin = new Coin(platform.x + random(20, 80), platform.y - 20, platform.getPlatformSpeed());
         coins.add(coin);
       }
     }
-    Platform goodPlatform = new Platform(random(width - 100), height/2, false);
+    Platform goodPlatform = new Platform(random(width - 100), height/2, false, gameModel);
     platforms.add(goodPlatform);
     ball.setY(goodPlatform.y - 10);
     ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
@@ -126,11 +126,16 @@ public class GameService {
 
     Platform bottomPlatform = platforms.get(platforms.size() - 1);
     if (bottomPlatform.y < height - platformInterval) {
-      platforms.add(new Platform(random(width - 100), height));
+      if(gameModel.getLevel().equals("HARD") && random(10) < 3){
+        platforms.add(new Platform(random(width - 100), height, true, gameModel, false, -8));
+      }
+      else{
+        platforms.add(new Platform(random(width - 100), height, gameModel));
+      }
 
       // Generate a coin on top of the new platform
       if (random(1) < 0.2) {
-        Coin coin = new Coin(bottomPlatform.x + random(20, 80), bottomPlatform.y - 20);
+        Coin coin = new Coin(bottomPlatform.x + random(20, 80), bottomPlatform.y - 20, bottomPlatform.getPlatformSpeed());
         coins.add(coin);
       }
     }
@@ -249,7 +254,7 @@ public Ball getBall() {
         }
       }
 
-      Platform goodPlatform = new Platform(random(width - 100), height/2, false);
+      Platform goodPlatform = new Platform(random(width - 100), height/2, false, gameModel);
       platforms.add(goodPlatform);
       ball.setY(goodPlatform.y - 10);
       ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
