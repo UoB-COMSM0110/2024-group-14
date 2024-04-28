@@ -1,9 +1,39 @@
-# 2024-group-14
+<h1 align="center">University of Bristol<br>Software Engineering - Group 14 (2024)</h1>
+
+<p align="center">
+  <img src="report_material/images/e45cf978b3978db542194d88877e1d4.png" alt="deep sea fall">
+</p>
+
+## Table of Contents
+1. [Game Video](#game-video)
+   - [Deep Sea Fall](#deep-sea-fall)
+2. [Team](#team)
+3. [Introduction](#introduction)
+4. [Requirements](#requirements)
+   - [Ideation Process](#ideation-process)
+   - [Early stages design](#early-stages-design)
+   - [Technical Requirements](#technical-requirements)
+   - [User stories](#user-stories)
+   - [Use-Case Diagram](#use-case-diagram)
+   - [Use-Case Specifications](#use-case-specifications)
+5. [Design](#design)
+   - [Class Diagram](#class-diagram)
+   - [Sequence Diagram](#sequence-diagram)
+   - [Communication Diagram](#communication-diagram)
+6. [Implementation](#implementation)
+7. [Evaluation](#evaluation)
+   - [Qualitative Evaluations](#qualitative-evaluations)
+   - [Quantitative Evaluations](#quantitative-evaluations)
+8. [Process](#process)
+9. [Conclusion](#conclusion)
+10. [Individual Contributions](#individual-contributions)
+11. [References](#references)
 
 ## Game Video
 ### Deep Sea Fall
+[![deep-sea-fall-image](report_material/images/e45cf978b3978db542194d88877e1d4.png)](https://www.youtube.com/watch?v=dPGMfqa_MJc)
 
-Click on the video above to view our game! 
+Click on the image above to view our game! 
 
 ## Team
 ### Hao Lu, Jiarong Zhang, Boyang Lin, Tanmay Mishra, Elvis Yung 
@@ -137,7 +167,7 @@ With the class diagram created, we thought the next best step was to slowly impl
 ![sequence-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/sequence-diagram.png)
 
 ### Communication Diagram
-Lastly, we decided to create a communication diagram to help us visualise the interactions between classes in our game. Moreover, in the early stages of our planning, we realised that a difficult mechanic in our game would be detecting collisions of platforms and coins and updating the game state based on this information. Therefore, we decided to create a communication diagram to help us illustrate how the player handles input and interactions it has with other objects in our game. The communication diagram provided us with a rough guideline to develop collision detection and the game state based on the player's input. This was extremely helpful in the early stages of game development as once we understood how to handle collisions and updating the game state, we were able to slowly implement the rest of our game based on our sequence and class diagrams. 
+Lastly, we decided to create a communication diagram to help us visualise the interactions between classes in our game. Moreover, in the early stages of our planning, we realised that a difficult mechanic in our game would be detecting collisions of platforms and coins and updating the game state based on this information. Therefore, we decided to create a communication diagram to help us illustrate how the player handles input and interactions it has with other objects in our game. The communication diagram provided us with a rough guideline to develop collision detection and the game state based on the player's input. This was extremely helpful in the early stages of game development as once we understood how to handle collisions and update the game state, we were able to slowly implement the rest of our game based on our sequence and class diagrams. 
 
 ![communication-diagram](https://github.com/UoB-COMSM0110/2024-group-14/blob/develop/report_material/images/communication-diagram.png)
 
@@ -155,7 +185,7 @@ Additionally, the unique and dynamic nature of our generation platforms inspires
 ### Respawn Location 
 The respawn mechanics presented us with a unique challenge in terms of game design, as determining the right platform and location for player re-engagement was critical to maintaining the flow of gameplay and players as they got involved. As a team, we implemented a dynamic respawn system that prioritized player experience and ensured smooth progression through the game.
 
-Where there was no suitable platforms available for respawn, we generated new platforms to accompany this. Not only did this change demonstrate our commitment to enhancing the gaming experience, but it also added an element of unpredictability and excitement for players. By constantly changing progress and adjusting to suit the needs of the players, we aim to keep them on their toes and challenge their skills and techniques.
+Where there were no suitable platforms available for respawn, we generated new platforms to accompany this. Not only did this change demonstrate our commitment to enhancing the gaming experience, but it also added an element of unpredictability and excitement for players. By constantly changing progress and adjusting to suit the needs of the players, we aim to keep them on their toes and challenge their skills and techniques.
 
 Additionally, our new respawn system also contributed to an immersive and fluid gaming experience, reducing downtime and keeping players actively engaged in the action. Therefore, this minimized disruption and provided fast and strategic respawn options, which maintained a fast-paced and exciting gaming environment for players. Likewise, it encouraged players to make changes and improve their game plans.
 
@@ -335,11 +365,11 @@ Here is the combination we derived from the Equivalence Partitioning (EP) Method
 | Invalid Player Jump | PJ_2 | canJump == false |
 
 ## Process
-This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. Likewise, during each meeting, each member takes turn being responsible for note-keeping and summarizing the key points discussed during the meeting. At the beginning of the project, we established a clear division of labour, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing sections of the report, collecting user test data and conducting quantitative and qualitative reports. This division of labour allowed each person to maximize their effectiveness in their areas of expertise. Moreover, we allowed each member to be flexible in their areas of strengths and experience different areas if they choose to, this allowed us to be more cohesive as a team as we were all familiar with the development process of our game. 
+This semester, our group worked closely and communicated deeply, experiencing the true power of teamwork. We conducted weekly meetings via Teams to summarize the previous week's work and discuss plans for the coming week. This approach not only improved our communication efficiency but also strengthened the cohesion of our team. Likewise, during each meeting, each member takes turns being responsible for note-keeping and summarizing the key points discussed during the meeting. At the beginning of the project, we established a clear division of labour, with members assigned to different roles based on their strengths. Elvis, Tanmay, and Boyang were responsible for game development, while Jiarong and Lu Hao were tasked with writing sections of the report, collecting user test data and conducting quantitative and qualitative reports. This division of labour allowed each person to maximize their effectiveness in their areas of expertise. Moreover, we allowed each member to be flexible in their areas of strengths and experience different areas if they choose to, this allowed us to be more cohesive as a team as we were all familiar with the development process of our game. 
 
 ![teams-meetings](report_material/kanbanboard/14-feb-2024-teams.png)
 
-Likewise, we utilised Git as version control to track the progress of our game and make necessary changes as the weeks progressed. During the beginning stages of our game development, we discussed heavily on the importance of Git, establishing separate branches for each team member and the workflow of using Git in a team. Likewise, before merging from develop to Main, we would create a pull request and have someone review it, ensuring quality control and a working main at all times - weekly merges of main were conducted. This was extended to our separate branches as well, where a team member would review the merge of own-branch to develop, ensuring the develop branch is working as well. As a team, we were receptive to this and supported each other if one of our members was lagging due to the unfamiliarity with Git. This set up for success as we did not encounter any major merge conflicts throughout the game development process, due to the stern rules in place before the project began. This made the development process more efficient and streamlined, which increased moral and enjoyment throughout this project. 
+Likewise, we utilised Git as version control to track the progress of our game and make necessary changes as the weeks progressed. During the beginning stages of our game development, we discussed heavily about the importance of Git, establishing separate branches for each team member and the workflow of using Git in a team. Likewise, before merging from develop to Main, we would create a pull request and have someone review it, ensuring quality control and a working main at all times - weekly merges of main were conducted. This was extended to our separate branches as well, where a team member would review the merge of our own branch to develop, ensuring the develop branch is working as well. As a team, we were receptive to this and supported each other if one of our members was lagging due to the unfamiliarity with Git. This set up for success as we did not encounter any major merge conflicts throughout the game development process, due to the stern rules in place before the project began. This made the development process more efficient and streamlined, which increased morale and enjoyment throughout this project. 
 
 ![branches](report_material/images/branches.png)
 
@@ -357,14 +387,14 @@ Looking back on the entire project, we were very satisfied and happy with the ou
 
 To conclude, this teamwork experience was extremely valuable not only to our professional, but personal development. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
 
-Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban-boards throughout our project and [HERE](./report_material/images/) to our WhatsApp texts and other report materials. 
+Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban boards and WhatsApp texts. 
 
 ## Conclusion
 In our team's game development process, the application of agile development principles significantly enhanced the project's flexibility and efficiency. Through rapid iterations and adjustments based on user feedback, we were able to promptly identify and resolve issues within the game design, ensuring a continuously optimized gameplay experience. However, we recognized the challenges in properly estimating tasks, often underestimating the time and resources required, leading to scheduling overruns. This has taught us the importance of a more thorough initial analysis and continuous reassessment of task complexity, which we plan to integrate more rigorously in future projects.
 
-Regular communication via platforms like WhatsApp and structured meetings not only maintained high team morale and productivity, but also facilitated swift information flow and immediate problem resolution. Moreover, using Git for version control and Kanban boards to manage tasks brought organization and transparency to our development process, ensuring efficient collaboration among team members and consistency with project goals. In terms of game design, by introducing unique gameplay twists like moving platforms and a retro pixel art style, we successfully created a game that appeals to both new players and nostalgics alike.
+Regular communication via platforms like WhatsApp and structured meetings not only maintained high team morale and productivity but also facilitated swift information flow and immediate problem resolution. Moreover, using Git for version control and Kanban boards to manage tasks brought organization and transparency to our development process, ensuring efficient collaboration among team members and consistency with project goals. In terms of game design, by introducing unique gameplay twists like moving platforms and a retro pixel art style, we successfully created a game that appeals to both new players and nostalgics alike.
 
-This agile and adaptive development approach not only improved the technical quality of the game but also strengthened the dynamic collaboration within the team. Each iteration was an enhancement not just of the game's features but also of our team's operational methods. Through continuous testing and refinement, we ensured that the game would perform optimally upon release. However, we sometimes failed to prioritize and implement user feedback adequately due to our development velocity, an area we aim to improve by implementing a more structured system for collecting and acting on feedback.
+This agile and adaptive development approach not only improved the technical quality of the game but also strengthened the dynamic collaboration within the team. Each iteration was an enhancement not just of the game's features but also of our team's operational methods. Through continuous testing and refinement, we ensured that the game would perform optimally upon release. However, we sometimes fail to prioritize and implement user feedback adequately due to our development velocity, an area we aim to improve by implementing a more structured system for collecting and acting on feedback.
 
 Moving forward, we plan to continue employing this flexible development methodology to stay responsive to rapidly changing market demands and technological advancements, keeping our products competitive. We will focus more on enhancing our feedback loop and refining our task estimation practices to ensure better project outcomes. By learning from our past errors, particularly in underestimating tasks and occasionally neglecting valuable user feedback, we are committed to developing a more robust approach to project management. This commitment involves integrating lessons learned into our agile practices to prevent similar mistakes and continuously improve the quality and responsiveness of our product development process.
 
