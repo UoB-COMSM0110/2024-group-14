@@ -3,16 +3,23 @@ class Platform {
   boolean isObstacle;
   boolean isMoving;
   float speed;
-  static final float platformSpeed = -5;
+  float platformSpeed;
+  GameModel gameModel;
 
-  Platform(float tempX, float tempY, boolean isObstacle){
-   this(tempX, tempY);
+  Platform(float tempX, float tempY, boolean isObstacle, GameModel gameModel){
+   this(tempX, tempY, gameModel);
+   //this.gameModel = gameModel;
+   if(gameModel.getLevel().equals("HARD")){
+     platformSpeed = -6;
+   }
+   else platformSpeed = -2;
    this.isObstacle = isObstacle;
   }
 
-  Platform(float tempX, float tempY) {
+  Platform(float tempX, float tempY, GameModel gameModel) {
     x = tempX;
     y = tempY;
+    this.gameModel = gameModel;
 
     if (random(1) < 0.33) { // Red Platform
       isObstacle = true;
@@ -21,7 +28,8 @@ class Platform {
     }
 
     isMoving = random(1) < 0.5;
-    speed = random(-2, 2);
+    if(gameModel.getLevel().equals("HARD")) speed = random(-6, 6);
+    else speed = random(-2, 2);
   }
   
   boolean isObstacle(){
