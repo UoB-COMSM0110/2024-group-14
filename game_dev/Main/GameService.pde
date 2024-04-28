@@ -218,8 +218,7 @@ public class GameService {
       ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
     }
   }
-
-    
+  
     public void displayJumpText() {
     if (displayJumpText) {
         textSize(20);
