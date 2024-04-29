@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage mainMenu, spikes, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
+PImage coinModelLabel, tickingBomb, mainMenu, spikes, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
@@ -14,6 +14,8 @@ int musicDelay = 150;
 int buttonHeight = 70;
 int backButtonWidth = 100;
 int backButtonHeight = 30;
+int smallButtonWidth = 100;
+int smallButtonHeight = 40;
 int livesWidth = 30;
 int backButtonX = 3;
 int backButtonY = 3;
@@ -29,7 +31,7 @@ void setup() {
   textColor = color(255);
   gameModel = new GameModel();
   player = new Player();
-  ball = new Ball(10.0, 10.0); // TODO set some meaningful initial X, Y
+  ball = new Ball(10.0, 10.0, gameModel.getLevel()); // TODO set some meaningful initial X, Y
   gameService = new GameService(gameModel, ball, player);
   page = new Page(gameService);
   pageNumber = 1;
@@ -40,7 +42,11 @@ void setup() {
   gamePlayer = minim.loadFile("../assets/music/gameplay-music.mp3");
 
   mainMenu = loadImage("../assets/deep-sea2.jpg");
+  tickingBomb = loadImage("../assets/ticking-bomb.png");
   spikes = loadImage("../assets/platform-spikes.png");
+  platforms = loadImage("../assets/platform01.png");
+  coinModel = loadImage("../assets/coin.png");
+  coinModelLabel = loadImage("../assets/coin.png");
   livesLabel = loadImage("../assets/heart-image.png");
   scoreLabel = loadImage("../assets/score-button.png");
   backButton = loadImage("../assets/back-button.png");
@@ -95,11 +101,8 @@ void draw() {
     page.helpPage();
     break;
   case 5:
-    page.leaderboardPage();
-    break;
   case 6:
   case 7:
-  case 8:
     page.gamePlayPage();
     break;
   default:
@@ -134,14 +137,6 @@ void mousePressed() {
       pageNumber = 4;
       changeMusic(gamePlayer, titlePlayer);
     }
-    // Check if Mouse is inside the Leaderboard Button on Main Menu
-    if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
-      mouseY > (height/2 - buttonHeight) + 300 && mouseY < (height/2) + 300) {
-      // Start button clicked, you can add your code here to start the game
-      println("LeaderBoard button Clicked");
-      pageNumber = 5;
-      changeMusic(gamePlayer, titlePlayer);
-    }
   }
   if (pageNumber == 2) {
     // Check if the Mouse is inside the Easy Button
@@ -149,21 +144,21 @@ void mousePressed() {
       mouseY > (height/2 - buttonHeight) - 75 && mouseY < (height/2) - 75) {
       println("Easy button clicked");
       gameModel.setLevel("EASY");
-      pageNumber = 6;
+      pageNumber = 5;
     }
     // Check if the Mouse is inside the Medium Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 75 && mouseY < (height/2) + 75) {
       println("Medium button clicked");
       gameModel.setLevel("MEDIUM");
-      pageNumber = 7;
+      pageNumber = 6;
     }
     // Check if the Mouse is inside the Hard Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 225 && mouseY < (height/2) + 225) {
       println("Hard button clicked");
       gameModel.setLevel("HARD");
-      pageNumber = 8;
+      pageNumber = 7;
     }
   }
   // Check if Mouse is inside the Back Button on Any Other Page

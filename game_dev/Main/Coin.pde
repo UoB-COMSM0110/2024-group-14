@@ -1,14 +1,15 @@
 class Coin {
   private float x, y;
-  static final float coinSpeed = -2;
-  Coin(float tempX, float tempY) {
+  float coinSpeed = -2;
+  Coin(float tempX, float tempY, float coinSpeed) {
     x = tempX;
     y = tempY;
+    this.coinSpeed = coinSpeed;
   }
 
   public void display() {
-    fill(255, 255, 0); // Yellow color for coins
-    ellipse(x, y, 20, 20);
+    coinModel.resize(22, 22);
+    image(coinModel, x, y);
   }
   
   public void move(){
