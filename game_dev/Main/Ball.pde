@@ -14,6 +14,7 @@ class Ball {
     jumpState = false;
     y = initialY;
     if(mode.equals("HARD")) maxSpeed = 8;
+    //this.speedY = speedY;
   }
   
   public void setJumpState(boolean jumpState){

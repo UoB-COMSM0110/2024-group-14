@@ -1,5 +1,5 @@
 import ddf.minim.*;
-PImage coinModelLabel, tickingBomb, mainMenu, spikes, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
+PImage coinModelLabel, tickingBomb, mainMenu, spikes, platforms, coinModel, howToPlayLabel, livesLabel, shipImage, speechBubble, scoreLabel, startButton, helpButton, scoreBoardButton, statusBar, aboutButton, gameTitle, diverImage, sharkImage, crabPlayer, backButton, loreLogo, leftArrowLabel, rightArrowLabel, spaceKeyLabel, easyButton, levelLogo, mediumButton, hardButton;
 
 int pageNumber;
 Minim minim;
@@ -52,6 +52,7 @@ void setup() {
   backButton = loadImage("../assets/back-button.png");
   startButton = loadImage("../assets/start-button.png");
   helpButton = loadImage("../assets/help-button.png");
+  scoreBoardButton = loadImage("../assets/scoreboard-button.png");
   aboutButton = loadImage("../assets/about-button.png");
   gameTitle = loadImage("../assets/game-title.png");
   diverImage = loadImage("../assets/diver-image.png");
@@ -115,18 +116,24 @@ void mousePressed() {
     // Check if the mouse is inside the Start button on Main Menu
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > height/2 - buttonHeight && mouseY < height/2) {
+      // Start button clicked, you can add your code here to start the game
       changeMusic(titlePlayer, gamePlayer);
+      println("Start button clicked");
       pageNumber = 2;
     }
     // Check if Mouse is inside the About Button on Main Menu
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 100 && mouseY < (height/2) + 100) {
+      // Start button clicked, you can add your code here to start the game
+      println("About button clicked");
       pageNumber = 3;
       changeMusic(gamePlayer, titlePlayer);
     }
     // Check if Mouse is inside the Help Button on Main Menu
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 200 && mouseY < (height/2) + 200) {
+      // Start button clicked, you can add your code here to start the game
+      println("Help button Clicked");
       pageNumber = 4;
       changeMusic(gamePlayer, titlePlayer);
     }
@@ -135,26 +142,30 @@ void mousePressed() {
     // Check if the Mouse is inside the Easy Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) - 75 && mouseY < (height/2) - 75) {
+      println("Easy button clicked");
       gameModel.setLevel("EASY");
       pageNumber = 5;
     }
     // Check if the Mouse is inside the Medium Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 75 && mouseY < (height/2) + 75) {
+      println("Medium button clicked");
       gameModel.setLevel("MEDIUM");
       pageNumber = 6;
     }
     // Check if the Mouse is inside the Hard Button
     if (mouseX > width/2 - buttonWidth/2 && mouseX < width/2 + buttonWidth/2 &&
       mouseY > (height/2 - buttonHeight) + 225 && mouseY < (height/2) + 225) {
+      println("Hard button clicked");
+      gameModel.setLevel("HARD");
       pageNumber = 7;
     }
   }
   // Check if Mouse is inside the Back Button on Any Other Page
   if (mouseX > backButtonX && mouseX < backButtonX + backButtonWidth &&
     mouseY > backButtonY && mouseY < backButtonY + backButtonHeight) {
+    println("Back Button clicked");
     pageNumber = 1;
-    gameService.resetLives();
     changeMusic(gamePlayer, titlePlayer);
   }
 }

@@ -34,7 +34,7 @@ public class Page {
 
     image(helpButton, (width/2 - buttonWidth/2) + 3, (height/2 - buttonHeight) + 200, buttonWidth, buttonHeight);
   }
-  
+
   private void drawStatusBar() {
     fill(255);
     rect(0, 0, width, statusBarHeight);
@@ -81,7 +81,7 @@ public class Page {
       gameService.displayCollectedCoins();
       gameService.displayScore();
       gameService.drawLivesOnScreen();
-      //gameService.displayJumpText();  // Add this line to display the jump text
+      gameService.displayJumpText();  // Add this line to display the jump text
       if(keyPressed && key == ' '){
         gameService.jumpBall();
       }
@@ -95,23 +95,23 @@ public class Page {
     }
   }
 
-  public void handleInput() {
-    Ball ball = gameService.getBall();  // Get the Ball object from the gameService
+public void handleInput() {
+  Ball ball = gameService.getBall();  // Get the Ball object from the gameService
   
-    if (keyPressed) {
-      if (keyCode == LEFT) {
-        ball.setSpeedX(-ball.maxSpeed);
-      } else if (keyCode == RIGHT) {
-        ball.setSpeedX(ball.maxSpeed);
-      } else if (key == ' ') {  // Space bar pressed
-        if (gameModel.getLevel().equals("HARD")) {  // Check if level is HARD
-          ball.jump();  // Trigger the jump
-        }
+  if (keyPressed) {
+    if (keyCode == LEFT) {
+      ball.setSpeedX(-ball.maxSpeed);
+    } else if (keyCode == RIGHT) {
+      ball.setSpeedX(ball.maxSpeed);
+    } else if (key == ' ') {  // Space bar pressed
+      if (gameModel.getLevel().equals("HARD")) {  // Check if level is HARD
+        ball.jump();  // Trigger the jump
       }
-    } else {
-      ball.setSpeedX(0);
     }
+  } else {
+    ball.setSpeedX(0);
   }
+}
 
 
   public void aboutPage() {
@@ -170,13 +170,14 @@ public class Page {
     text("Platforms are not moving, spikes are", 150, 125);
     text("obstacles to avoid.", 150, 145);
     
-   
+    
     text("Platforms are moving, spikes are", 150, 235);
     text("obstacles to avoid.", 150, 255);
     
     text("Platforms are moving, spikes are", 150, 345);
-    text("obstacles to avoid and gravity", 150, 365);
-    text("inverts - jumping is allowed.", 150, 385);
+    text("obstacles to avoid and bomb", 150, 365);
+    text("like obstacles move with high speed ", 150, 385);
+    text("that need to be avoided", 150, 405);
     
     float iconSize = 40; // New smaller size for the key icons
     
@@ -195,5 +196,6 @@ public class Page {
     image(spaceKeyLabel, spaceKeyX, height - 3 * iconSize, iconSize, iconSize);
     float spaceTextWidth = textWidth("Crab Jump");
     text("Crab Jump", spaceKeyX + iconSize / 4 - spaceTextWidth / 2, height - 3 * iconSize + iconSize + 10);
-  }
+}
+
 }

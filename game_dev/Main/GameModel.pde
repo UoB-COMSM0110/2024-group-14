@@ -12,7 +12,7 @@ public class GameModel {
     this.score = score;
     this.level = level;
     this.lives = lives;
-    this.gravity = 0.05;
+    this.gravity = 0.20;
     this.isGameOver = false;
   }
 
