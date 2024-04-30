@@ -31,7 +31,7 @@
 
 ## Game Video
 ### Deep Sea Fall
-[![deep-sea-fall-image](report_material/images/e45cf978b3978db542194d88877e1d4.png)](https://www.youtube.com/watch?v=dPGMfqa_MJc)
+[![deep-sea-fall-image](report_material/images/e45cf978b3978db542194d88877e1d4.png)](https://www.youtube.com/watch?v=fVVZBDAYDvg)
 
 Click on the image above to view our game! 
 
@@ -54,7 +54,7 @@ To kick off this unit, we first had an in-person brain-storming session to discu
 ### Early stages design
 During the early stages of the design process, we began to iterate on the game that was chosen as our template - Rapid Roll. We wanted to incorporate elements of pixel art and retro-like aspects in our game since all of us shared fond memories of playing these games in our childhood. Because of this, Rapid Roll was the perfect game for us to develop interesting challenges and captivating lore behind our game. We believe that creating a simple, but challenging and impressionable, game would captivate the players and have them coming back for more. 
 
-During our discussions, we identified what game mechanics and graphics we would like to be incorporated in our game and drew mock-ups of what it would look like on an iPad. This allowed us to visualise the final game which motivated all of us to be invested in the development process. These images represent an early rough draft of our game with different levels incorporated and what the main game page would look like. As a team, we also wanted to immerse the player in a lore-like environment by designing our graphics based on a deep sea theme (spikes, crabs and shark teeth). Furthermore, as we continued to refine our ideas, different iterations of mock-ups were drew up to represent the ideas of the team. 
+During our discussions, we identified what game mechanics and graphics we would like to be incorporated in our game and drew mock-ups of what it would look like on an iPad. This allowed us to visualise the final game which motivated all of us to be invested in the development process. These images represent an early rough draft of our game with different levels incorporated and what the main game page would look like. As a team, we also wanted to immerse the player in a lore-like environment by designing our graphics based on a deep sea theme (spikes, crabs and shark teeth). Furthermore, as we continued to refine our ideas, different iterations of mock-ups were drawn up to represent the ideas of the team. 
 
 Overall, the early stage design process consisted of discussions around appropriate themes, game mechanics, challenges and difficulty levels. We wanted these elements to be represented throughout our game and we believe that creating mock-ups early on helped us envision the final product. Because of this, we have a clear vision of what the game would look like and are confident that it will bring different elements of enjoyment to players.
 
@@ -74,8 +74,6 @@ Overall, the early stage design process consisted of discussions around appropri
 
 > "⁠As a player, I want to be able to choose a difficulty level for the game to suit my style of play better"
 
-> "⁠As a player, I want to be able to see a scoreboard and compare myself with my peers"
-
 > "As a player, I want to see my score and lives left on the screen as I play the game"
 
 > "⁠⁠As a player, I want to see the rules of the game before playing it, so that I can prepare myself for the challenges ahead"
@@ -90,11 +88,11 @@ As a team, we created a use-case diagram to illustrate the functional components
 ### Use-Case Specifications
 
 **Easy mode:**
-The platform will only move from the bottom to the top and there are no obstacles.
+The platform will only move from the bottom to the top and there are no moving obstacles.
 
 **Basic flow:**
 The user plays the game with less than three lives lost.
-1. The system displays the main page, which includes the START, ABOUT HELP, and LEADERBOARD.
+1. The system displays the main page, which includes the START, ABOUT PAGE and HELP.
 2. The user presses START to start playing.
 3. The system displays the difficulty level: EASY, MEDIUM, or HARD.
 4. The user chooses EASY.
@@ -106,14 +104,14 @@ The user plays the game with less than three lives lost.
 
 7. If the user hits a spike or falls off, the user loses one life and the system automatically returns the crab to a certain position to continue the game.
 8. The users lose all their three lives during the game.
-9. The game ends, and a screen pops up asking the player to either play a 'NEW GAME' or return to 'HOME'.
+9. The game ends, and a screen pops up asking the player to press 'R' to restart the game.
 
 **Medium mode:**
 The system adds obstacles and platforms that move left and right to the game interface based on easy mode.
 
 **Basic flow:**
 The user plays the game with less than three lives lost.
-1. The system displays the main page, which includes the START, ABOUT HELP, and LEADERBOARD.
+1. The system displays the main page, which includes the START, ABOUT PAGE and HELP.
 2. The user presses START to start playing.
 3. The system displays the difficulty level: EASY, MEDIUM, or HARD.
 4. The user chooses MEDIUM.
@@ -125,14 +123,14 @@ The user plays the game with less than three lives lost.
 
 8. If the user hits a spike or obstacles, or falls off, the user loses one life and the system automatically returns the crab to a certain position to continue the game.
 9. The users lose all their three lives during the game.
-10. The game ends, and a screen pops up asking the player to either play a 'NEW GAME' or return to 'HOME'.
+10. The game ends, and a screen pops up asking the player to press 'R' to restart the game.
 
 **Hard mode:**
 The system adds jumping functions and additional obstacles based on the medium mode.
 
 **Basic flow:**
 The user plays the game with less than three lives lost.
-1. The system displays the main page, which includes the START, ABOUT HELP, and LEADERBOARD.
+1. The system displays the main page, which includes the START, ABOUT PAGE and HELP.
 2. The user presses START to start playing.
 3. The system displays the difficulty level: EASY, MEDIUM, or HARD.
 4. The user chooses HARD.
@@ -145,7 +143,7 @@ The user plays the game with less than three lives lost.
 
 9. If the user hits a spike or obstacles, or falls off, the user loses one life and the system automatically returns the crab to a certain position to continue the game.
 10. The users lose all their three lives during the game.
-11. The game ends, and a screen pops up asking the player to either play a 'NEW GAME' or return to 'HOME'.
+11. The game ends, and a screen pops up asking the player to press 'R' to restart the game.
 
 ## Design
 This section is where we applied the knowledge we gained from workshops and lectures and applied it to our game. This section illustrates an overview of the system architecture of our game, in addition to the Unified Modelling Language (UML) diagrams that we created to help us and others visualise the workflow of our game. These designs heavily influenced the implementation of our game as they provided comprehensive design elements that would serve as a good starting point. Moreover, these tools and techniques solidified our understanding of the trade-offs and benefits of certain diagrams, helping us further understand and appreciate the taught material. Finally, since we chose an agile/iterative approach to our game development, these diagrams served as rough guides to help us envision and keep us on track for the final product. We found that this approach allowed for the most flexibility in terms of planning and improvements, due to the ever-changing nature of game development. 
@@ -195,7 +193,7 @@ As a team, we decided to conduct think-aloud and heuristics evaluation as this w
 
 After the qualitative evaluations were conducted, we made improvements to our game and used NASA TLX and SUS forms to quantitatively evaluate our game. By using this, we were able to gain insight on the difficulties of our game and how it impacts players with metrics to back up our findings. Moreover, we can identify areas of improvement and make further adjustments if need be. We thoroughly enjoyed this process as we were able to display our game to others, gain insights into the difficulties of our levels through concrete metrics and iterate on our design based on the feedback given. 
 
-Lastly, as a group, we focused heavily on code testing, attempting to incorporate both black and white box methods. Since we placed a huge emphasis on giving users a seamless user experience, we thought that using both methods, it would cover most of the game's functionality from a technical and user perspective. With this, it helped us identify technical issues/bugs in our code, before shipping the final product to the masses. 
+Lastly, as a group, we focused heavily on code testing, attempting to incorporate both black and white box methods. Since we placed a huge emphasis on giving users a seamless user experience, we thought that using both methods would cover most of the game's functionality from a technical and user perspective. With this, it helped us identify technical issues/bugs in our code, before shipping the final product to the masses. 
 
 ### Qualitative Evaluations:
 
@@ -304,7 +302,7 @@ final scores: (There are decimals in the calculation result, and the final resul
 | Weighted | 36 | 24 | 42 | 27 | 28 | 31 | 25 | 23 | 27 | 27 |  
 
 Statistic testing:  
-To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode. We need to evaluate multiple load dimensions and allow users to compare on pairwise dimensions, so our Wilcoxon signed rank test is more suitable for analysis using relatively weighted NASA TLX results [1].
+To explore whether there is a significant difference between the two difficulty levels in the game, we used the Wilcoxon signed-rank test. The two workload levels are easy mode and hard mode. The number of users here is 10, so N is 10. We set the alpha value to 0.05. If a significant difference is found, there is a 95% probability that this is a real difference and not caused by randomness. The null hypothesis is that there is no difference between easy mode and hard mode. We need to evaluate multiple load dimensions and allow users to compare on pairwise dimensions, so our Wilcoxon signed rank test is more suitable for analysis using relatively weighted NASA TLX results [1].
 
 First calculate the difference in each pair of comparisons, subtracting the hard mode value from the easy mode value to get Table 1, then remove the zero values, because if the difference is zero, they will not have an impact on the test result. Then we calculated the rank, looked up relevant information [2], and for the same values, we used the average rank. Then we calculated the positive rank and negative rank (as shown in Table 2), and took the smaller rank as the W value.
 
@@ -357,6 +355,8 @@ Here is the combination we derived from the Equivalence Partitioning (EP) Method
 | Invalid Player Collision on Spikes | PCS_2 | checkCollision().isObstacle() == false |
 | Valid Player Collision on Coin | PCC_1 | checkCollision() == true |
 | Invalid Player Collision on Coin | PCC_2 | checkCollision() == false |
+| Valid Player Collision on Bomb | PCB_1 | checkCollision() == true |
+| Invalid Player Collision on Bomb | PCB_2 | checkCollision() == false |
 | Valid Player Jump | PJ_1 | canJump == true |
 | Invalid Player Jump | PJ_2 | canJump == false |
 
@@ -381,7 +381,7 @@ Throughout the process, we deeply appreciated the importance of close collaborat
 
 Looking back on the entire project, we were very satisfied and happy with the outcome and realized the importance of agile development and communication. It not only improved our work efficiency but also enhanced collaboration among the team. The use of Kanban made our project management more intuitive and orderly. This successful experience gave us a deeper understanding and appreciation of agile development methods, and we all deeply hope to continue using agile strategies in future projects.
 
-To conclude, this teamwork experience was extremely valuable not only to our professional, but personal development. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
+To conclude, this teamwork experience was extremely valuable not only to our professional, but personal development as well. It not only taught us how to effectively manage a complex project but also let us experience teamwork with strangers and continuously improve our communication style and produce a coherent product at the end. We look forward to continuing to use agile development principles in future work, bringing more success!
 
 Clicking [HERE](./report_material/kanbanboard/) will link you to the directory containing all our kanban boards and WhatsApp texts. 
 
