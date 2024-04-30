@@ -19,20 +19,26 @@ public class GameService {
   public void initializeGame() {
     platforms.clear();
     coins.clear();
+    
+    // Generates platforms when the game is first initialized 
     for (int i = 0; i < height; i += platformInterval) {
       Platform platform = new Platform(random(width - 100), height - i - platformInterval, gameModel);
       platforms.add(platform);
 
+      // Adding coins to the platforms 
       if (random(1) < 0.2) {
         Coin coin = new Coin(platform.x + random(20, 80), platform.y - 20, platform.getPlatformSpeed());
         coins.add(coin);
       }
     }
+    
+    // Generates the number of "Good" platforms that are not spiked 
     Platform goodPlatform = new Platform(random(width - 100), height/2, false, gameModel);
     platforms.add(goodPlatform);
     ball.setY(goodPlatform.y - 10);
     ball.setX(goodPlatform.getX() + goodPlatform.getWidth() / 2);
     
+    // Resets gamestate 
     gameModel.setScore(0);
     gameModel.setLives(3);
     gameModel.setIsGameOver(false);
@@ -48,6 +54,7 @@ public class GameService {
     text(score, backButtonX + backButtonWidth + 20 + backButtonWidth, backButtonY+25);
   }
 
+  // Checks whether the player is in conditions that warrants game over 
   public void checkGameOver() {
     if(gameModel.getLives() == 0) gameModel.setIsGameOver(true);
     if (ball.y > height - 15 || ball.y < 0) {
@@ -82,6 +89,7 @@ public class GameService {
     return false;
   }
 
+  // Updates platforms based on the level of difficulty 
   public void updatePlatforms() {
     for (int i = platforms.size() - 1; i >= 0; i--) {
       Platform p = platforms.get(i);
@@ -136,6 +144,7 @@ public class GameService {
     gameModel.setLives(gameModel.getLives()-1);
   }
 
+  // Checks collision with platforms and spikes 
   public void checkCollision() {
     float x = ball.getX(), y = ball.getY();
     for (Platform p : platforms) {
@@ -155,6 +164,7 @@ public class GameService {
       }
     }
 
+    // Checks collision for coins 
     for (Coin c : coins) {
       if (c.checkCollision(x, y + 10)) {
         coins.remove(c);
@@ -169,6 +179,7 @@ public class GameService {
     }
   }
 
+  // Update coins accordingly 
   public void updateCoins() {
     for (Coin c : coins) {
       c.display();
@@ -197,7 +208,8 @@ public class GameService {
   public Ball getBall() {
     return ball;
   }
-
+  
+  // Respawn logic for playing a platform under the position of respawn for the player 
   public void respawn() {
     if (!isGameOver()) {
       delay(500);

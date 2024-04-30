@@ -23,6 +23,7 @@ class Platform {
     this.isHardObstacle = true;
   }
 
+  // Controls the differences of platforms generated to accomodate for the differences in difficulty 
   Platform(float tempX, float tempY, GameModel gameModel) {
     x = tempX;
     y = tempY;
@@ -55,7 +56,6 @@ class Platform {
   }
 
   void display() {
-    //fill(platColor);
     if(isHardObstacle){
       tickingBomb.resize(30, 20);
       image(tickingBomb, x, y);
@@ -74,6 +74,7 @@ class Platform {
     return ballX > x && ballX < x + 100 && ballY > y && ballY < y + 20;
   }
   
+  // Determins the movement of the platforms 
   void move() {
     this.y += platformSpeed;
     if (isMoving) {

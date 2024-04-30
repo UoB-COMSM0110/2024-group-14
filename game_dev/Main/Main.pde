@@ -70,6 +70,7 @@ void setup() {
   spaceKeyLabel = loadImage("../assets/space-key.png");
 }
 
+// Changes music dependent on what page the player is currently on 
 void changeMusic(AudioPlayer currentMusic, AudioPlayer newMusic) {
   if (!currentMusic.isPlaying() || newMusic.isPlaying()) {
     return;
@@ -79,12 +80,14 @@ void changeMusic(AudioPlayer currentMusic, AudioPlayer newMusic) {
   newMusic.loop();
 }
 
+// Stops music from player 
 void musicStop(AudioPlayer player) {
   player.close();
   minim.stop();
   super.stop();
 }
 
+// Draws the pages according to where the player navigates to 
 void draw() {
   switch(pageNumber) {
   case 1:
