@@ -42,7 +42,11 @@ Click on the image above to view our game!
 ## Introduction 
 ![Rapid-roll-image](https://github.com/UoB-COMSM0110/2024-group-14/blob/main/report_material/images/rapid-roll.jpg)
 
-Our creative inspiration is drawn from a classic Nokia game called "Rapid Roll." On top of preserving its original fun and entertainment, we've added additional features on the hardest level for the "twist": the player will need to survive by jumping and avoiding more obstacles while the level moves quickly. Throughout the whole game's development process, we've engaged in extensive collaboration to find the most suitable development approach for our team. We ended up choosing Kanban and agile development as our core principles due to their flexibility in developing without clear constraints which helped us iteratively improve our game. Furthermore, this assisted us in constantly reflecting, adjusting and discussing our plans and weekly tasks to better our team's ability to collaborate outside of weekly sessions. 
+Our creative inspiration is drawn from a classic Nokia game called "Rapid Roll." On top of preserving its original fun and entertainment, we've added additional features on the hardest level for the "twist": the player will need to survive by jumping and avoiding more obstacles while the level moves quickly. Adding these features allows players to experience several elements of other games that test their reflexes and strategic thinking in a fast-paced environment.
+
+Throughout the whole game's development process, we've engaged in extensive collaboration to find the most suitable development approach for our team. We ended up choosing Kanban and agile development as our core principles due to their flexibility in developing without clear constraints. This helped us iteratively improve our game, allowing us to adapt to changing requirements and player feedback quickly.
+
+Furthermore, this approach assisted us in constantly reflecting, adjusting, and discussing our plans and weekly tasks to better our team's ability to collaborate outside of weekly sessions. By fostering open communication and encouraging continuous improvement, we ensured that our development process was not only efficient, but also conducive to creativity and innovation.
 
 ## Requirements
 
