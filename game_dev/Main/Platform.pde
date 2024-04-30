@@ -89,6 +89,6 @@ class Platform {
   }
 
   float getWidth() {
-    return 100;  // Assuming the width of the platform is always 100
+    return 100; 
   }
 }

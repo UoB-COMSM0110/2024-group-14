@@ -6,7 +6,6 @@ public class GameService {
   ArrayList<Coin> coins;
   final int platformInterval = 150;
   private boolean canJump = true;
-  private boolean displayJumpText = false;
 
   public GameService(GameModel gameModel, Ball ball, Player player) {
     this.gameModel = gameModel;
@@ -223,4 +222,13 @@ public class GameService {
   public boolean canJump() {
     return canJump;
   }
+  
+  public void resetGame() {
+    gameModel.setLives(3);
+    gameModel.setScore(0);
+    gameModel.setIsGameOver(false);
+    player.setCoinsCollected(0);
+    initializeGame();
+  }
+ 
 }
