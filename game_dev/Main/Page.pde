@@ -68,10 +68,6 @@ public class Page {
 
     if (!gameService.isGameOver()) {
       gameService.updateBall();
-      //thread("updateBall");
-      //if(gameModel.getLevel().equals("HARD") && random(1) < 0.5){
-      //  gameService.invertGravity();
-      //}
       gameService.updatePlatforms();
       gameService.updateCoins();
       gameService.checkCollision();
@@ -81,7 +77,6 @@ public class Page {
       gameService.displayCollectedCoins();
       gameService.displayScore();
       gameService.drawLivesOnScreen();
-      gameService.displayJumpText();  // Add this line to display the jump text
       if(keyPressed && key == ' '){
         gameService.jumpBall();
       }
@@ -95,23 +90,23 @@ public class Page {
     }
   }
 
-public void handleInput() {
-  Ball ball = gameService.getBall();  // Get the Ball object from the gameService
-  
-  if (keyPressed) {
-    if (keyCode == LEFT) {
-      ball.setSpeedX(-ball.maxSpeed);
-    } else if (keyCode == RIGHT) {
-      ball.setSpeedX(ball.maxSpeed);
-    } else if (key == ' ') {  // Space bar pressed
-      if (gameModel.getLevel().equals("HARD")) {  // Check if level is HARD
-        ball.jump();  // Trigger the jump
+  public void handleInput() {
+    Ball ball = gameService.getBall();  // Get the Ball object from the gameService
+    
+    if (keyPressed) {
+      if (keyCode == LEFT) {
+        ball.setSpeedX(-ball.maxSpeed);
+      } else if (keyCode == RIGHT) {
+        ball.setSpeedX(ball.maxSpeed);
+      } else if (key == ' ') {  // Space bar pressed
+        if (gameModel.getLevel().equals("HARD")) {  // Check if level is HARD
+          ball.jump();  // Trigger the jump
+        }
       }
-    }
-  } else {
-    ball.setSpeedX(0);
+    } else {
+      ball.setSpeedX(0);
+      }
   }
-}
 
 
   public void aboutPage() {
@@ -196,6 +191,5 @@ public void handleInput() {
     image(spaceKeyLabel, spaceKeyX, height - 3 * iconSize, iconSize, iconSize);
     float spaceTextWidth = textWidth("Crab Jump");
     text("Crab Jump", spaceKeyX + iconSize / 4 - spaceTextWidth / 2, height - 3 * iconSize + iconSize + 10);
-}
-
+  }
 }
